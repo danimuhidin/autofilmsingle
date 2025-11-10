@@ -250,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* 2. Hero Section (Owl Carousel) */
 .hero-carousel .item {
-    height: 100vh;
+    height: 70vh;
     min-height: 500px;
     position: relative;
     background-size: cover;
@@ -1205,6 +1205,11 @@ hr.custom-hr {
 @media (min-width: 992px) {
     .deskripsi-kategori .icon-wrapper {
         opacity: 0.5;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
     }
 }
 

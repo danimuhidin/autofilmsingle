@@ -8,7 +8,7 @@
     <section class="hero-carousel p-0" id="home">
         <div class="owl-carousel owl-theme" id="hero-slider">
             <div class="item"
-                style="background-image: url('https://placehold.co/1920x1080/222/FFF?text=Mobil+Mewah+Tertinted');">
+                style="background-image: url('{{ asset('images/hero1.webp') }}');">
                 <div class="hero-overlay">
                     <div class="container hero-content">
                         <h1>Privasi dan Perlindungan Terbaik</h1>
@@ -18,22 +18,12 @@
                 </div>
             </div>
             <div class="item"
-                style="background-image: url('https://placehold.co/1920x1080/333/FFF?text=Gedung+Modern+Reflektif');">
+                style="background-image: url('{{ asset('images/hero2.webp') }}');">
                 <div class="hero-overlay">
                     <div class="container hero-content">
                         <h1>Solusi Efisiensi Energi Gedung</h1>
                         <p>Kurangi panas dan hemat biaya operasional dengan kaca film arsitektural.</p>
                         <a href="#kontak-outlet" class="btn btn-merah">Hubungi Tim Proyek</a>
-                    </div>
-                </div>
-            </div>
-            <div class="item"
-                style="background-image: url('https://placehold.co/1920x1080/444/FFF?text=Interior+Mobil+Sejuk');">
-                <div class="hero-overlay">
-                    <div class="container hero-content">
-                        <h1>Kualitas Premium, Pemasangan Presisi</h1>
-                        <p>Didukung oleh teknisi profesional dan produk bergaransi resmi.</p>
-                        <a href="#kontak-outlet" class="btn btn-merah">Booking Pemasangan</a>
                     </div>
                 </div>
             </div>
@@ -43,21 +33,22 @@
     <section id="tentang-kami" class="section-padding">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="https://placehold.co/600x400/FFD700/1a1a1a?text=Mantra+Sakti+HQ" class="img-fluid rounded"
-                        alt="Gedung Mantra Sakti Autofilm">
+                <div class="col-lg-6 mb-4 mb-lg-0 pr-lg-4">
+                    <img src="{{ asset('images/hq.jpg') }}" class="img-fluid rounded" alt="Gedung Mantra Sakti Autofilm">
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="mb-3" style="color: var(--warna-kuning-aksen);">Selamat Datang di Mantra Sakti Autofilm
-                    </h2>
-                    <h4 class="mb-4">Pusat Kaca Film Premium di Indonesia</h4>
-                    <p class="text-white-50">Mantra Sakti Autofilm adalah distributor utama dan pusat spesialis pemasangan
-                        kaca film premium untuk otomotif dan arsitektural. Sebagai kantor pusat, kami menjamin ketersediaan
-                        produk original, standar pemasangan tertinggi, dan layanan garansi resmi yang terpercaya.</p>
+                    <h3 class="mb-3" style="color: var(--warna-kuning-aksen);">Selamat Datang di Mantra Sakti Autofilm
+                    </h3>
+                    <h4 class="mb-4">Ahlinya Kaca Film Mobil Dan Gedung</h4>
+                    <p class="text-white-50">Mantra Sakti Autofilm salah satu spesialis kaca film mobil & gedung. Kami
+                        menerima jasa panggilan pemasangan kaca film mobil & gedung , dengan menyediakan berbagai merk di
+                        antaranya Solar Gard, Llumar, Perfections, Ilumi, 3M Autofilm, Ice View, N1, Una Gard dan merk
+                        lainnya yang sesuai dengan keinginan anda. Produk yang di sediakan 100% Original dan tentunya dengan
+                        kualitas terbaik.</p>
                     <p class="text-white-50">Kami tidak hanya melayani pelanggan retail, tetapi juga menjadi mitra
                         terpercaya bagi jaringan outlet kami yang tersebar di berbagai kota. Percayakan kebutuhan privasi,
                         keamanan, dan estetika Anda pada ahlinya.</p>
-                    <a href="#produk-kami" class="btn btn-outline-warning mt-3">Lihat Produk Kami</a>
+                    {{-- <a href="#produk-kami" class="btn btn-outline-warning mt-3">Lihat Produk Kami</a> --}}
                 </div>
             </div>
         </div>
@@ -69,37 +60,26 @@
                 <h2>Produk & Layanan Kami</h2>
                 <p>Solusi lengkap untuk kebutuhan kaca film Anda.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-5 col-md-6 mb-4">
                     <div class="card produk-card h-100">
-                        <img src="https://placehold.co/600x400/555/FFF?text=Kaca+Film+Mobil" class="card-img-top"
+                        <img src="{{ asset('images/pasang-mobil.webp') }}" class="card-img-top"
                             alt="Kaca Film Mobil">
                         <div class="card-body">
-                            <h4 class="card-title">Kaca Film Mobil</h4>
-                            <p class="card-text text-white-50">Tingkatkan privasi, tolak panas UV, dan tampil lebih elegan.
+                            <h4 class="card-title w-100 text-center mb-2"><b>Kaca Film Mobil</b></h4>
+                            <p class="card-text text-center text-white-50">Tingkatkan privasi, tolak panas UV, dan tampil lebih elegan.
                                 Tersedia berbagai brand premium dengan tingkat kegelapan bervariasi.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="col-lg-5 col-md-6 mb-4">
                     <div class="card produk-card h-100">
-                        <img src="https://placehold.co/600x400/666/FFF?text=Kaca+Film+Gedung" class="card-img-top"
+                        <img src="{{ asset('images/pasang-gedung.webp') }}" class="card-img-top"
                             alt="Kaca Film Gedung">
                         <div class="card-body">
-                            <h4 class="card-title">Kaca Film Gedung</h4>
-                            <p class="card-text text-white-50">Solusi hemat energi untuk kantor, ruko, dan residensial.
+                            <h4 class="card-title w-100 text-center mb-2"><b>Kaca Film Gedung</b></h4>
+                            <p class="card-text text-center text-white-50">Solusi hemat energi untuk kantor, ruko, dan residensial.
                                 Menjaga suhu ruangan tetap sejuk dan melindungi interior dari pudar.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card produk-card h-100">
-                        <img src="https://placehold.co/600x400/777/FFF?text=Pemasangan+Profesional" class="card-img-top"
-                            alt="Layanan Pemasangan Profesional">
-                        <div class="card-body">
-                            <h4 class="card-title">Pemasangan Profesional</h4>
-                            <p class="card-text text-white-50">Teknisi kami tersertifikasi dan berpengalaman, menjamin
-                                pemasangan yang presisi, bebas gelembung, dan bergaransi resmi.</p>
                         </div>
                     </div>
                 </div>
