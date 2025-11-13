@@ -466,6 +466,11 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
 }
 
+.card.outlet-card .card-body {
+    background-color: var(--warna-latar-gelap);
+    border-radius: 10px;
+}
+
 .btn-kuning {
     background-color: var(--warna-kuning-aksen);
     color: #111;

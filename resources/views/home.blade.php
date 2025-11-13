@@ -7,8 +7,7 @@
 
     <section class="hero-carousel p-0" id="home">
         <div class="owl-carousel owl-theme" id="hero-slider">
-            <div class="item"
-                style="background-image: url('{{ asset('images/hero1.webp') }}');">
+            <div class="item" style="background-image: url('{{ asset('images/car.jpg') }}');">
                 <div class="hero-overlay">
                     <div class="container hero-content">
                         <h1>Privasi dan Perlindungan Terbaik</h1>
@@ -17,8 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item"
-                style="background-image: url('{{ asset('images/hero2.webp') }}');">
+            <div class="item" style="background-image: url('{{ asset('images/hero2.webp') }}');">
                 <div class="hero-overlay">
                     <div class="container hero-content">
                         <h1>Solusi Efisiensi Energi Gedung</h1>
@@ -63,22 +61,22 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-5 col-md-6 mb-4">
                     <div class="card produk-card h-100">
-                        <img src="{{ asset('images/pasang-mobil.webp') }}" class="card-img-top"
-                            alt="Kaca Film Mobil">
+                        <img src="{{ asset('images/pasang-mobil.webp') }}" class="card-img-top" alt="Kaca Film Mobil">
                         <div class="card-body">
                             <h4 class="card-title w-100 text-center mb-2"><b>Kaca Film Mobil</b></h4>
-                            <p class="card-text text-center text-white-50">Tingkatkan privasi, tolak panas UV, dan tampil lebih elegan.
+                            <p class="card-text text-center text-white-50">Tingkatkan privasi, tolak panas UV, dan tampil
+                                lebih elegan.
                                 Tersedia berbagai brand premium dengan tingkat kegelapan bervariasi.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 mb-4">
                     <div class="card produk-card h-100">
-                        <img src="{{ asset('images/pasang-gedung.webp') }}" class="card-img-top"
-                            alt="Kaca Film Gedung">
+                        <img src="{{ asset('images/pasang-gedung.webp') }}" class="card-img-top" alt="Kaca Film Gedung">
                         <div class="card-body">
                             <h4 class="card-title w-100 text-center mb-2"><b>Kaca Film Gedung</b></h4>
-                            <p class="card-text text-center text-white-50">Solusi hemat energi untuk kantor, ruko, dan residensial.
+                            <p class="card-text text-center text-white-50">Solusi hemat energi untuk kantor, ruko, dan
+                                residensial.
                                 Menjaga suhu ruangan tetap sejuk dan melindungi interior dari pudar.</p>
                         </div>
                     </div>
@@ -137,49 +135,85 @@
                 <p>Lihat hasil kerja presisi dari tim profesional kami.</p>
             </div>
 
-            <div class="row mb-5">
-                <div class="col-lg-4 col-md-6 col-6">
-                    <a href="https://placehold.co/600x400/888/FFF?text=Galeri+1" class="gallery-img">
-                        <img src="https://placehold.co/600x400/888/FFF?text=Galeri+1" class="img-fluid" alt="Galeri 1">
-                    </a>
+            <div class="row gallery-container mb-3">
+
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper">
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/galeri/g1.jpg') }}" data-lightbox="galeri-portofolio"
+                            data-title="Pemasangan Kaca Film Llumar">
+                            <img src="{{ asset('images/galeri/g1.jpg') }}" class="img-fluid" alt="Pemasangan Llumar">
+                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-6">
-                    <a href="https://placehold.co/600x400/888/FFF?text=Galeri+2" class="gallery-img">
-                        <img src="https://placehold.co/600x400/888/FFF?text=Galeri+2" class="img-fluid" alt="Galeri 2">
-                    </a>
+
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper">
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/galeri/g2.jpg') }}" data-lightbox="galeri-portofolio"
+                            data-title="Pemasangan Kaca Film Di Kaca Depan">
+                            <img src="{{ asset('images/galeri/g2.jpg') }}" class="img-fluid"
+                                alt="Pemasangan Kaca Film Depan">
+                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-6">
-                    <a href="https://placehold.co/600x400/888/FFF?text=Galeri+3" class="gallery-img">
-                        <img src="https://placehold.co/600x400/888/FFF?text=Galeri+3" class="img-fluid" alt="Galeri 3">
-                    </a>
+
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper">
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/galeri/g3.jpg') }}" data-lightbox="galeri-portofolio"
+                            data-title="Pemasangan Kaca Film 3M Cristalline">
+                            <img src="{{ asset('images/galeri/g3.jpg') }}" class="img-fluid"
+                                alt="Pemasangan Kaca Film 3M Cristalline">
+                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-6">
-                    <a href="https://placehold.co/600x400/888/FFF?text=Galeri+4" class="gallery-img">
-                        <img src="https://placehold.co/600x400/888/FFF?text=Galeri+4" class="img-fluid" alt="Galeri 4">
-                    </a>
+
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper">
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/galeri/g7.jpg') }}" data-lightbox="galeri-portofolio"
+                            data-title="Pemasangan Solar Gard">
+                            <img src="{{ asset('images/galeri/g7.jpg') }}" class="img-fluid"
+                                alt="Pemasangan Solar Gard">
+                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-6">
-                    <a href="https://placehold.co/600x400/888/FFF?text=Galeri+5" class="gallery-img">
-                        <img src="https://placehold.co/600x400/888/FFF?text=Galeri+5" class="img-fluid" alt="Galeri 5">
-                    </a>
+
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper">
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/galeri/g5.jpg') }}" data-lightbox="galeri-portofolio"
+                            data-title="Pemasangan Kaca Film Ilumi">
+                            <img src="{{ asset('images/galeri/g5.jpg') }}" class="img-fluid"
+                                alt="Pemasangan Kaca Film Ilumi">
+                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-6">
-                    <a href="https://placehold.co/600x400/888/FFF?text=Galeri+6" class="gallery-img">
-                        <img src="https://placehold.co/600x400/888/FFF?text=Galeri+6" class="img-fluid" alt="Galeri 6">
-                    </a>
+
+                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper">
+                    <div class="gallery-item">
+                        <a href="{{ asset('images/galeri/g6.jpg') }}" data-lightbox="galeri-portofolio"
+                            data-title="Pemasangan Kaca Film di Kaca Samping">
+                            <img src="{{ asset('images/galeri/g6.jpg') }}" class="img-fluid"
+                                alt="Pemasangan Kaca Film di Kaca Samping">
+                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+                        </a>
+                    </div>
                 </div>
+
             </div>
 
             <div class="row">
                 <div class="col-lg-6 mb-4 mb-lg-0 video-wrapper">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/lfI6FlKeUnA"
                             allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6 video-wrapper">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LXmXIq9rKhM"
                             allowfullscreen></iframe>
                     </div>
                 </div>
@@ -248,24 +282,30 @@
                 <h2>Brand Partner Resmi Kami</h2>
                 <p>Kami hanya bekerja dengan brand terbaik dan terpercaya.</p>
             </div>
-            <div class="row align-items-center">
+            <div class="row align-items-center justify-content-center">
                 <div class="col-lg-2 col-md-4 col-6 partner-logo">
-                    <img src="https://placehold.co/150x80/eee/aaa?text=Brand+1" alt="Partner 1" class="img-fluid">
+                    <img src="{{ asset('images/brand/3m.png') }}" alt="Partner 1" class="img-fluid">
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 partner-logo">
-                    <img src="https://placehold.co/150x80/eee/aaa?text=Brand+2" alt="Partner 2" class="img-fluid">
+                    <img src="{{ asset('images/brand/ice.png') }}" alt="Partner 2" class="img-fluid">
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 partner-logo">
-                    <img src="https://placehold.co/150x80/eee/aaa?text=Brand+3" alt="Partner 3" class="img-fluid">
+                    <img src="{{ asset('images/brand/ilumi.png') }}" alt="Partner 3" class="img-fluid">
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 partner-logo">
-                    <img src="https://placehold.co/150x80/eee/aaa?text=Brand+4" alt="Partner 4" class="img-fluid">
+                    <img src="{{ asset('images/brand/llumar.png') }}" alt="Partner 4" class="img-fluid">
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 partner-logo">
-                    <img src="https://placehold.co/150x80/eee/aaa?text=Brand+5" alt="Partner 5" class="img-fluid">
+                    <img src="{{ asset('images/brand/n1.png') }}" alt="Partner 5" class="img-fluid">
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 partner-logo">
-                    <img src="https://placehold.co/150x80/eee/aaa?text=Brand+6" alt="Partner 6" class="img-fluid">
+                    <img src="{{ asset('images/brand/solar.png') }}" alt="Partner 6" class="img-fluid">
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 partner-logo">
+                    <img src="{{ asset('images/brand/perfect.png') }}" alt="Partner 6" class="img-fluid">
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 partner-logo">
+                    <img src="{{ asset('images/brand/una.png') }}" alt="Partner 6" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -309,12 +349,26 @@
 
                 <div class="col-lg-5">
                     <h4>Informasi Kantor Pusat (HQ)</h4>
-                    <p class="text-white-50">Hubungi kami langsung di kantor pusat untuk layanan korporat, kemitraan, atau
-                        konsultasi proyek skala besar.</p>
+                    <p class="text-white-50">
+                        Hubungi kami langsung di kantor pusat untuk layanan korporat, kemitraan, atau
+                        konsultasi proyek skala besar.
+                    </p>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Jl. Raya Pusat No. 123, Jakarta, Indonesia</p>
-                        <p><i class="fas fa-phone-alt"></i> (021) 1234 5678</p>
-                        <p><i class="fas fa-envelope"></i> hq@mantrasakti.com</p>
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            Jl. Mekar Puspita No.23, Cibaduyut, Kec. Bojongloa Kidul,
+                            Kota Bandung, Jawa Barat 40236, Bandung, Jawa Barat 40236
+                        </p>
+                        <p>
+                            <i class="fas fa-phone-alt"></i>
+                            <a class="text-white-50" href="tel:081244000805">081244000805</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-instagram"></i>
+                            <a class="text-white-50" href="https://www.instagram.com/mantrasaktiautofilm?igshid=ZmVmZTY5ZGE%3D" target="_blank">
+                                @mantrasaktiautofilm
+                            </a>
+                        </p>
                         <p><i class="fas fa-clock"></i> <strong>Jam Operasional HQ:</strong><br>
                             Senin - Jumat: 08.00 - 17.00<br>
                             Sabtu: 08.00 - 14.00<br>
@@ -330,15 +384,15 @@
                         <div class="card outlet-card h-100">
                             <div class="card-body">
                                 <h5 class="card-title" style="color: var(--warna-kuning-aksen);">
-                                    Mantra Sakti - Jakarta
+                                    Mantra Sakti - Bekasi
                                 </h5>
                                 <p class="card-text text-white-50">
-                                    Jl. Otomotif Raya No. 1, Kelapa Gading, Jakarta Utara
+                                    Grand Wisata, Ruko AA 15 No.16, Lambangsari, Tambun Selatan, Bekasi Regency, West Java 17510
                                 </p>
                                 <p class="card-text text-white-50">
-                                    <i class="fas fa-phone-alt"></i> (021) 9876 5432
+                                    <i class="fas fa-phone-alt"></i> 0813-2323-0805
                                 </p>
-                                <a href="#" class="btn btn-kuning btn-sm">
+                                <a target="_blank" href="https://www.google.com/maps?ll=-6.283755,107.043247&z=20&t=m&hl=id&gl=US&mapclient=embed&q=Grand+Wisata,+Ruko+AA+15+No.16,+Lambangsari,+Tambun+Selatan,+Bekasi+Regency,+West+Java+17510,+Indonesia" class="btn btn-kuning btn-sm">
                                     Lihat Google Maps
                                 </a>
                             </div>
@@ -348,15 +402,15 @@
                         <div class="card outlet-card h-100">
                             <div class="card-body">
                                 <h5 class="card-title" style="color: var(--warna-kuning-aksen);">
-                                    Mantra Sakti - Surabaya
+                                    Mantra Sakti - Tangerang
                                 </h5>
                                 <p class="card-text text-white-50">
-                                    Jl. Raya Darmo No. 45, Wonokromo, Surabaya
+                                    Ruko Mendrisio, Jl. Boulevard iL Lago No.68, Cihuni, Kec. Pagedangan, Kabupaten Tangerang, Banten 15334
                                 </p>
                                 <p class="card-text text-white-50">
-                                    <i class="fas fa-phone-alt"></i> (031) 1234 5678
+                                    <i class="fas fa-phone-alt"></i> 0821-1000-2805
                                 </p>
-                                <a href="#" class="btn btn-kuning btn-sm">
+                                <a target="_blank" href="https://www.google.com/maps?ll=-6.26797,106.630905&z=19&t=m&hl=id&gl=US&mapclient=embed&q=Ruko+Mendrisio,+Jl.+Boulevard+iL+Lago+No.68,+Cihuni,+Kec.+Pagedangan,+Kabupaten+Tangerang,+Banten+15334,+Indonesia" class="btn btn-kuning btn-sm">
                                     Lihat Google Maps
                                 </a>
                             </div>
@@ -366,15 +420,15 @@
                         <div class="card outlet-card h-100">
                             <div class="card-body">
                                 <h5 class="card-title" style="color: var(--warna-kuning-aksen);">
-                                    Mantra Sakti - Bandung
+                                    Mantra Sakti - Cibubur
                                 </h5>
                                 <p class="card-text text-white-50">
-                                    Jl. Sukajadi No. 99, Sukasari, Bandung
+                                    Jl Alternatif Cibubur, Cibubur Point Automotif Center Ruko Blok B5, Kota Depok, Jawa Barat 16454
                                 </p>
                                 <p class="card-text text-white-50">
-                                    <i class="fas fa-phone-alt"></i> (022) 8765 4321
+                                    <i class="fas fa-phone-alt"></i> 0812-1100-9805
                                 </p>
-                                <a href="#" class="btn btn-kuning btn-sm">Lihat Google Maps</a>
+                                <a target="_blank" href="https://www.google.com/maps?ll=-6.376698,106.897967&z=21&t=m&hl=id&gl=US&mapclient=embed&q=Jl+Alternatif+Cibubur,+Cibubur+Point+Automotif+Center+Ruko+Blok+B5,+Kota+Depok,+Jawa+Barat+16454,+Indonesia" class="btn btn-kuning btn-sm">Lihat Google Maps</a>
                             </div>
                         </div>
                     </div>

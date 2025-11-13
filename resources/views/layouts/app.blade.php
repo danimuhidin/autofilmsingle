@@ -79,7 +79,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <h5 class="navbar-brand" style="font-size: 2rem;">Mantra Sakti</h5>
+                        <img class="mb-2" src="{{ asset('images/logo.png') }}" alt="Mantra Sakti Autofilm" height="50">
                         <p>Pusat distributor dan spesialis pemasangan kaca film premium untuk otomotif dan gedung.
                             Kualitas, orisinalitas, dan garansi adalah prioritas kami.</p>
                     </div>
@@ -87,7 +87,6 @@
                         <h5>Quick Links</h5>
                         <ul>
                             <li><a href="{{ URL::to('/') }}">Home</a></li>
-                            <li><a href="{{ URL::to('kategori-produk') }}">Produk</a></li>
                             <li><a href="{{ URL::to('galeri') }}">Galeri</a></li>
                             <li><a href="{{ URL::to('about') }}">Tentang Kami</a></li>
                             <li><a href="{{ URL::to('contact') }}">Kontak</a></li>
@@ -97,12 +96,12 @@
                         </ul>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4">
-                        <h5>Kontak HQ</h5>
+                        <h5>Kontak</h5>
                         <p>
-                            <i class="fas fa-map-marker-alt"></i> Jl. Raya Pusat No. 123, Jakarta
+                            <i class="fas fa-map-marker-alt"></i> Jl. Mekar Puspita No.23, Bandung
                         </p>
                         <p>
-                            <i class="fas fa-phone-alt"></i> (021) 1234 5678
+                            <i class="fas fa-phone-alt"></i> 081244000805
                         </p>
                         <p>
                             <i class="fas fa-envelope"></i> hq@mantrasakti.com
@@ -112,10 +111,9 @@
                         <h5>Ikuti Kami</h5>
                         <p>Dapatkan info terbaru dan promo menarik.</p>
                         <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/mantra.sakti.autofilm.antapani/"><i class="fab fa-facebook-f"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/mantrasaktiautofilm?igshid=ZmVmZTY5ZGE"><i class="fab fa-instagram"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/@mantrasaktiautofilm4841"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
