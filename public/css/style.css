@@ -169,6 +169,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 13px;
 }
 
+#outlet-kami .card .meta a {
+    font-weight: 600;
+    color: var(--warna-teks-putih);
+}
+
+#outlet-kami .card .meta a:hover {
+    color: var(--warna-kuning-aksen);
+}
+
 .gallery-grid {
     padding-bottom: 5rem;
 }
@@ -756,9 +765,12 @@ footer ul li a:hover {
 
 /* == 5. Nilai-Nilai Kami (REUSED FROM HOMEPAGE) == */
 .feature-box {
+    background-color: var(--warna-latar-sekunder);
     text-align: center;
     padding: 20px;
     transition: all 0.3s;
+    border-radius: 10px;
+    height: 100%;
 }
 
 .feature-box .feature-icon {

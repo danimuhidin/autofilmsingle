@@ -32,21 +32,26 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 pr-lg-4">
-                    <img src="{{ asset('images/hq.jpg') }}" class="img-fluid rounded" alt="Gedung Mantra Sakti Autofilm">
+                    <img src="{{ asset('images/pasang-mobil.webp') }}" class="img-fluid rounded"
+                        alt="Gedung Mantra Sakti Autofilm">
                 </div>
                 <div class="col-lg-6">
                     <h3 class="mb-3" style="color: var(--warna-kuning-aksen);">Selamat Datang di Mantra Sakti Autofilm
                     </h3>
                     <h4 class="mb-4">Ahlinya Kaca Film Mobil Dan Gedung</h4>
-                    <p class="text-white-50">Mantra Sakti Autofilm salah satu spesialis kaca film mobil & gedung. Kami
-                        menerima jasa panggilan pemasangan kaca film mobil & gedung , dengan menyediakan berbagai merk di
-                        antaranya Solar Gard, Llumar, Perfections, Ilumi, 3M Autofilm, Ice View, N1, Una Gard dan merk
-                        lainnya yang sesuai dengan keinginan anda. Produk yang di sediakan 100% Original dan tentunya dengan
-                        kualitas terbaik.</p>
-                    <p class="text-white-50">Kami tidak hanya melayani pelanggan retail, tetapi juga menjadi mitra
-                        terpercaya bagi jaringan outlet kami yang tersebar di berbagai kota. Percayakan kebutuhan privasi,
-                        keamanan, dan estetika Anda pada ahlinya.</p>
-                    {{-- <a href="#produk-kami" class="btn btn-outline-warning mt-3">Lihat Produk Kami</a> --}}
+                    <p class="text-white-50">
+                        Perusahaan spesialis kaca film untuk otomotif dan gedung yang berdiri sejak Mei 2022. Dengan
+                        pengalaman dan kepercayaan dari ribuan pelanggan,
+                        kami hadir sebagai authorized dealer resmi berbagai merek
+                        kaca film ternama yaitu Perfections Window Film, Llumar
+                        Indonesia, 3M Autofilm Indonesia, Ilumi Indonesia, Una Gard,
+                        dan Ice View Indonesia.
+                    </p>
+                    <p class="text-white-50">
+                        Kami tidak hanya melayani pelanggan retail, tetapi juga menjadi mitra terpercaya bagi jaringan
+                        outlet kami yang tersebar di berbagai kota. Percayakan kebutuhan privasi, keamanan, dan estetika
+                        Anda pada ahlinya.
+                    </p>
                 </div>
             </div>
         </div>
@@ -70,7 +75,9 @@
                             <h3 class="title">Mantra Sakti - Bandung</h3>
                             <p class="desc"> Jl. Mekar Puspita No.23, Cibaduyut, Kec. Bojongloa Kidul</p>
                             <div class="meta">
-                                <span>📞 0812-4400-0805</span>
+                                <a href="https://wa.me/6281244000805" target="_blank" class="me-2">
+                                    <span>📞 0812-4400-0805</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -82,7 +89,9 @@
                             <h3 class="title">Mantra Sakti - Bekasi</h3>
                             <p class="desc"> Grand Wisata, Ruko AA 15 No.16, Lambangsari, Tambun Selatan</p>
                             <div class="meta">
-                                <span>📞 0813-2323-0805</span>
+                                <a href="https://wa.me/6281323230805" target="_blank" class="me-2">
+                                    <span>📞 0813-2323-0805</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -94,7 +103,9 @@
                             <h3 class="title">Mantra Sakti - Tangerang</h3>
                             <p class="desc"> Ruko Mendrisio, Jl. Boulevard iL Lago No.68, Cihuni, Kec. Pagedangan</p>
                             <div class="meta">
-                                <span>📞 0821-1000-2805</span>
+                                <a href="https://wa.me/6282110002805" target="_blank" class="me-2">
+                                    <span>📞 0821-1000-2805</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -106,7 +117,9 @@
                             <h3 class="title">Mantra Sakti - Cibubur</h3>
                             <p class="desc"> Jl Alternatif Cibubur, Cibubur Point Automotif Center Ruko Blok B5</p>
                             <div class="meta">
-                                <span>📞 0812-1100-9805</span>
+                                <a href="https://wa.me/6281211009805" target="_blank" class="me-2">
+                                    <span>📞 0812-1100-9805</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -118,29 +131,203 @@
     <section id="produk-kami" class="section-padding bg-dark">
         <div class="container">
             <div class="section-title">
-                <h2>Produk & Layanan Kami</h2>
-                <p>Solusi lengkap untuk kebutuhan kaca film Anda.</p>
+                <h2>Pilihan Produk Kaca Film</h2>
+                <p>
+                    Berikut adalah beberapa produk kaca film unggulan yang kami tawarkan. Setiap produk dirancang
+                    untuk memberikan performa terbaik dalam menolak panas, melindungi dari sinar UV, dan meningkatkan
+                    kenyamanan.
+                </p>
             </div>
             <div class="row d-flex justify-content-center">
-                <div class="col-lg-5 col-md-6 mb-4">
-                    <div class="card produk-card h-100">
-                        <img src="{{ asset('images/pasang-mobil.webp') }}" class="card-img-top" alt="Kaca Film Mobil">
-                        <div class="card-body">
-                            <h4 class="card-title w-100 text-center mb-2"><b>Kaca Film Mobil</b></h4>
-                            <p class="card-text text-center text-white-50">Tingkatkan privasi, tolak panas UV, dan tampil
-                                lebih elegan.
-                                Tersedia berbagai brand premium dengan tingkat kegelapan bervariasi.</p>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="{{ asset('images/brand/3m.png') }}" class="card-img-top" alt="Logo 3M Autofilm">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">3M Autofilm</h5>
+                            <p class="card-text text-muted-light small">
+                                Pelopor, menawarkan perlindungan panas & privasi superior dengan teknologi non-metalik
+                                canggih.
+                            </p>
+                            <ul class="list-unstyled small my-2">
+                                <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 70%</li>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99.9%
+                                </li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
+                                    Hingga 62%</li>
+                            </ul>
+                            <a href="{{ URL::to('detail-produk/3m-autofilm') }}" class="btn btn-merah mt-auto">Lihat
+                                Detail</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-5 col-md-6 mb-4">
-                    <div class="card produk-card h-100">
-                        <img src="{{ asset('images/pasang-gedung.webp') }}" class="card-img-top" alt="Kaca Film Gedung">
-                        <div class="card-body">
-                            <h4 class="card-title w-100 text-center mb-2"><b>Kaca Film Gedung</b></h4>
-                            <p class="card-text text-center text-white-50">Solusi hemat energi untuk kantor, ruko, dan
-                                residensial.
-                                Menjaga suhu ruangan tetap sejuk dan melindungi interior dari pudar.</p>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="{{ asset('images/brand/ice.png') }}" class="card-img-top" alt="Logo Iceview">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Iceview</h5>
+                            <p class="card-text text-muted-light small">
+                                Kaca film berkualitas tinggi, fokus pada penolakan panas maksimal dan kejernihan pandangan
+                                yang optimal.
+                            </p>
+                            <ul class="list-unstyled small my-2">
+                                <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
+                                    Hingga 55%</li>
+                            </ul>
+                            <a href="{{ URL::to('detail-produk/iceview') }}" class="btn btn-merah mt-auto">Lihat
+                                Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="{{ asset('images/brand/ilumi.png') }}" class="card-img-top"
+                            alt="Logo Ilumi Window Film">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Ilumi Window Film</h5>
+                            <p class="card-text text-muted-light small">
+                                Menawarkan perlindungan UV yang baik dengan harga kompetitif, pilihan seimbang antara
+                                performa dan biaya.
+                            </p>
+                            <ul class="list-unstyled small my-2">
+                                <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
+                                    Hingga 55%</li>
+                            </ul>
+                            <a href="{{ URL::to('detail-produk/ilumi-window-film') }}"
+                                class="btn btn-merah mt-auto">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="{{ asset('images/brand/llumar.png') }}" class="card-img-top" alt="Logo Llumar">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Llumar</h5>
+                            <p class="card-text text-muted-light small">
+                                Kaca film global teruji, dikenal karena daya tahan, kejernihan optik, dan tolak panas yang
+                                konsisten.
+                            </p>
+                            <ul class="list-unstyled small my-2">
+                                <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
+                                    Hingga 55%</li>
+                            </ul>
+                            <a href="{{ URL::to('detail-produk/llumar') }}" class="btn btn-merah mt-auto">Lihat
+                                Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="{{ asset('images/brand/n1.png') }}" class="card-img-top" alt="Logo N1 Window Film">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">N1 Window Film</h5>
+                            <p class="card-text text-muted-light small">
+                                Pilihan ekonomis dengan performa dasar yang memadai, menolak panas harian dan memberikan
+                                privasi.
+                            </p>
+                            <ul class="list-unstyled small my-2">
+                                <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
+                                    Hingga 55%</li>
+                            </ul>
+                            <a href="{{ URL::to('detail-produk/n1-window-film') }}" class="btn btn-merah mt-auto">Lihat
+                                Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="{{ asset('images/brand/perfect.png') }}" class="card-img-top" alt="Logo Perfections">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Perfections</h5>
+                            <p class="card-text text-muted-light small">
+                                Menyediakan kaca film yang menggabungkan estetika premium dengan kemampuan tolak panas
+                                tinggi.
+                            </p>
+                            <ul class="list-unstyled small my-2">
+                                <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
+                                    Hingga 55%</li>
+                            </ul>
+                            <a href="{{ URL::to('detail-produk/perfections') }}" class="btn btn-merah mt-auto">Lihat
+                                Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="{{ asset('images/brand/solar.png') }}" class="card-img-top"
+                            alt="Logo Solar Gard Premium">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Solar Gard Premium</h5>
+                            <p class="card-text text-muted-light small">
+                                Merek terkemuka, menawarkan rangkaian lengkap solusi tolak panas, keamanan, dan perlindungan
+                                interior.
+                            </p>
+                            <ul class="list-unstyled small my-2">
+                                <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
+                                    Hingga 55%</li>
+                            </ul>
+                            <a href="{{ URL::to('detail-produk/solar-gard-premium') }}"
+                                class="btn btn-merah mt-auto">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="{{ asset('images/brand/una.png') }}" class="card-img-top" alt="Logo Una Gard">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Una Gard</h5>
+                            <p class="card-text text-muted-light small">
+                                Kaca film nano-keramik modern yang fokus pada tolak panas tanpa mengganggu sinyal
+                                elektronik.
+                            </p>
+                            <ul class="list-unstyled small my-2">
+                                <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
+                                    Hingga 55%</li>
+                            </ul>
+                            <a href="{{ URL::to('detail-produk/una-gard') }}" class="btn btn-merah mt-auto">Lihat
+                                Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="{{ asset('images/brand/vkool.png') }}" class="card-img-top" alt="Logo V-Kool">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">V-Kool</h5>
+                            <p class="card-text text-muted-light small">
+                                Pelopor kaca film spektral selektif, terkenal akan tolak panas tinggi dengan transmisi
+                                cahaya tampak yang jernih.
+                            </p>
+                            <ul class="list-unstyled small my-2">
+                                <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 40% - 70%</li>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99.9%
+                                </li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
+                                    Hingga 70%</li>
+                            </ul>
+                            <a href="{{ URL::to('detail-produk/v-kool') }}" class="btn btn-merah mt-auto">Lihat
+                                Detail</a>
                         </div>
                     </div>
                 </div>
@@ -154,36 +341,70 @@
                 <h2>Mengapa Memilih Mantra Sakti?</h2>
                 <p>Komitmen kami adalah kepuasan dan jaminan kualitas.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="keunggulan-item">
-                        <div class="icon"><i class="fas fa-shield-alt"></i></div>
-                        <h4>Garansi Resmi</h4>
-                        <p class="text-white-50">Jaminan garansi produk resmi hingga 7 tahun dari brand partner terkemuka.
+                        <div class="icon"><i class="fas fa-certificate"></i></div>
+                        <h4>Authorizerd Dealer</h4>
+                        <p class="text-white-50">
+                            Kami adalah dealre resmi untuk produk-produk kaca film terkemuka. Melalui kerjasama resmi dengan
+                            produsen, kami memiliki akses langsung ke produk asli berkualitas tinggi, keaslian produk kami
+                            dijamin, memberikan Anda keyakinan akan kualitas yang bertanding.
                         </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="keunggulan-item">
-                        <div class="icon"><i class="fas fa-users-cog"></i></div>
+                        <div class="icon"><i class="fas fa-shield-alt"></i></div>
                         <h4>Teknisi Profesional</h4>
-                        <p class="text-white-50">Tim installer kami terlatih dan tersertifikasi untuk hasil pemasangan
-                            terbaik.</p>
+                        <p class="text-white-50">
+                            Kami memberikan garansi resmi atas produk dan layanan pemasangan kami. Ini menjamin bahwa Anda
+                            mendapatkan layanan purna jual yang memadai, serta jaminan bahwa produk yang Anda beli
+                            terlindung dengan baik.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="keunggulan-item">
-                        <div class="icon"><i class="fas fa-thumbs-up"></i></div>
-                        <h4>Produk Original</h4>
-                        <p class="text-white-50">Kami hanya menyediakan produk 100% asli dan berkualitas tinggi dari brand
-                            terpercaya.</p>
+                        <div class="icon"><i class="fas fa-user-cog"></i></div>
+                        <h4>Teknisi Profesional</h4>
+                        <p class="text-white-50">
+                            Tim kami terdiri dari teknisi-teknisi berpengalaman dan terlatih dengan baik dalam pemasangan
+                            kaca film. Mereka menguasai teknik pemasangan yang tepat dan memastikan setiap langkah proses
+                            pemasangan dilakukan dengan presisi tinggi, sehingga memberikan hasil yang memuaskan.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="keunggulan-item">
                         <div class="icon"><i class="fas fa-check-circle"></i></div>
+                        <h4>Produk Original 100%</h4>
+                        <p class="text-white-50">
+                            Kami menawarkan kaca film yang sepenuhnya asli dengan standar kualitas yang diberikan oleh
+                            produsen. Produk ini dirancang untuk memberikan perlindungan maksimal dan kenyamanan Bagi
+                            Pelanggan kami.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="keunggulan-item">
+                        <div class="icon"><i class="fas fa-ruler-combined"></i></div>
                         <h4>Hasil Presisi</h4>
-                        <p class="text-white-50">Pemasangan detail dan rapi tanpa celah, gelembung, atau cacat sedikitpun.
+                        <p class="text-white-50">
+                            Detail adalah kunci. Kami menggunakan SOP ketat dan alat modern untuk menjamin hasil pemasangan
+                            yang rapi, bersih, dan sempurna. Setiap sudut dan lekukan diperhatikan dengan seksama untuk
+                            memastikan tampilan akhir yang profesional dan estetis.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="keunggulan-item">
+                        <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h4>Harga Kompetitif</h4>
+                        <p class="text-white-50">
+                            Kami Berkomitmen untuk memberikan harga yang kompetitif tanpa memngorbankan kualitas. Kami
+                            mengerti bahwa pelanggan mencari nilai terbaik untuk uang mereka, dan kami menawarkan harga yang
+                            bersaing untuk memberikan solusi kaca film yang berkualitas tanpa menguras kantong.
                         </p>
                     </div>
                 </div>
@@ -427,7 +648,9 @@
                         </p>
                         <p>
                             <i class="fas fa-phone-alt"></i>
-                            <a class="text-white-50" href="tel:081244000805">081244000805</a>
+                            <a class="text-white-50" href="https://wa.me/6281244000805" target="_blank">
+                                0812-4400-0805
+                            </a>
                         </p>
                         <p>
                             <i class="fab fa-instagram"></i>
@@ -437,7 +660,7 @@
                                 @mantrasaktiautofilm
                             </a>
                         </p>
-                        <p><i class="fas fa-clock"></i> <strong>Jam Operasional HQ:</strong><br>
+                        <p><i class="fas fa-clock"></i> <strong>Jam Operasional</strong><br>
                             Senin - Jumat: 08.00 - 17.00<br>
                             Sabtu: 08.00 - 14.00<br>
                             Minggu/Libur: Tutup</p>

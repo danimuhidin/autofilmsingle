@@ -29,7 +29,7 @@
                 <div class="col-md-6 mb-4 mb-md-0">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d247.5292365265803!2d107.60129351836224!3d-6.954015962128362!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e8ebd164e4f5%3A0x86b84352dc5f73e5!2sJl.%20Mekar%20Pratama%20No.6!5e0!3m2!1sid!2sus!4v1763391977185!5m2!1sid!2sus"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.485569049595!2d107.5983019!3d-6.9519062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9d6ec743431%3A0x34a4164586e6d0d4!2sMantra%20Sakti%20Autofilm%20Mekarwangi%20Bandung!5e0!3m2!1sid!2sid!4v1763987433226!5m2!1sid!2sid"
                             class="embed-responsive-item map-embed" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -59,7 +59,7 @@
                         <i class="fab fa-whatsapp"></i>
                         Hubungi via WhatsApp
                     </a>
-                    <a href="https://maps.app.goo.gl/s5Q2LUtgf8iEs6aw5"
+                    <a href="https://maps.app.goo.gl/ciC3NfRPtTpgAzhw6"
                         target="_blank" class="btn btn-outline-light mt-3">
                         <i class="fas fa-map-marked-alt"></i>
                         Buka di Google Maps
@@ -115,7 +115,7 @@
                 <div class="col-md-6 mb-4 mb-md-0">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d991.4919410341482!2d106.630905!3d-6.26797!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbfead526dd3%3A0xb403924aded901be!2sRuko%20Mendrisio!5e0!3m2!1sid!2sus!4v1763556522674!5m2!1sid!2sus"
+                            src="https://www.google.com/maps/embed?pb=!4v1763987544314!6m8!1m7!1slqxPVf8lRxek0drZTvYosA!2m2!1d-6.267916920764849!2d106.6308107396977!3f113.34!4f-3.0900000000000034!5f0.7820865974627469"
                             class="embed-responsive-item map-embed" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -144,7 +144,7 @@
                         <i class="fab fa-whatsapp"></i>
                         Hubungi via WhatsApp
                     </a>
-                    <a href="https://maps.app.goo.gl/k2FjnR7xc3t38g7K8"
+                    <a href="https://maps.app.goo.gl/8rhsdS2HoSb9ntJY9"
                         target="_blank" class="btn btn-outline-light mt-3">
                         <i class="fas fa-map-marked-alt"></i>
                         Buka di Google Maps

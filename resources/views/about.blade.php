@@ -21,21 +21,28 @@
     <section class="section-padding">
         <div class="container">
             <div class="row align-items-center">
-                
+
                 <div class="col-lg-6">
-                    <h4 class="mb-3" style="color: var(--warna-kuning-aksen);">Distributor Resmi Kaca Film Terbaik di Indonesia</h4>
-                    <p>Mantra Sakti Autofilm bukan sekadar bengkel biasa. Kami adalah
-                        distributor resmi dan pusat instalasi kaca film premium terpercaya di Indonesia.</p>
-                    <p>Didirikan atas kecintaan terhadap dunia otomotif dan kebutuhan akan perlindungan berkualitas, kami
-                        mendedikasikan diri untuk menyediakan produk kaca film 100% original dengan standar pemasangan
-                        tertinggi. Sejak awal berdiri, kami telah melayani ribuan pelanggan, memberikan solusi terbaik untuk
-                        kenyamanan, privasi, dan keamanan berkendara.</p>
-                    <p>Kami percaya bahwa setiap kendaraan berhak mendapatkan perlindungan terbaik. Itulah mengapa kami
-                        hanya bermitra dengan merek-merek ternama dunia dan memastikan setiap teknisi kami terlatih secara
-                        profesional dan bersertifikat.</p>
+                    <h4 class="mb-3" style="color: var(--warna-kuning-aksen);">
+                        Ahlinya Kaca Film Mobil Dan Gedung
+                    </h4>
+                    <h4 class="mb-3" style="color: var(--warna-kuning-aksen);">
+
+                    </h4>
+                    <p>Perusahaan spesialis kaca film untuk otomotif dan gedung yang berdiri sejak Mei 2022. Dengan
+                        pengalaman dan kepercayaan dari ribuan pelanggan,
+                        kami hadir sebagai authorized dealer resmi berbagai merek
+                        kaca film ternama yaitu Perfections Window Film, Llumar
+                        Indonesia, 3M Autofilm Indonesia, Ilumi Indonesia, Una Gard,
+                        dan Ice View Indonesia.</p>
+                    <p>Kami mengutamakan kualitas
+                        produk, keahlian teknisi, dan pelayanan prima kepada setiap
+                        pelanggana.Perfections Window Film, Llumar Indonesia, 3M
+                        Autofilm Indonesia, Ilumi Indonesia, Una Gard, dan Ice View
+                        Indonesia.</p>
                 </div>
                 <div class="col-lg-6 mb-4 mb-lg-0 pl-lg-4">
-                    <img src="{{ asset('images/hq.jpg') }}" alt="Workshop Mantra Sakti Autofilm"
+                    <img src="{{ asset('images/sertifikat.png') }}" alt="Workshop Mantra Sakti Autofilm"
                         class="img-fluid rounded shadow-lg">
                 </div>
             </div>
@@ -49,19 +56,26 @@
                 <div class="col-md-6 text-center text-md-left mb-5 mb-md-0">
                     <i class="fas fa-eye vision-mission-icon"></i>
                     <h3 class="font-weight-bold mb-3">Visi Kami</h3>
-                    <p>Menjadi tolok ukur (benchmark) industri kaca film di Indonesia; sebagai distributor dan pusat
-                        instalasi yang paling terpercaya, profesional, dan berorientasi pada kepuasan pelanggan.</p>
+                    <p>Komitmen kami adalah menjadi layanan
+                        kaca film terdepan di indonesia dengan
+                        menyediakan produk kaca film berkualitas
+                        tinggi, pelayanan pelangan yang superior,
+                        dan harga yang kompetitif.</p>
                 </div>
                 <!-- Kolom Kanan: Misi -->
                 <div class="col-md-6 text-center text-md-left">
                     <i class="fas fa-bullseye vision-mission-icon"></i>
                     <h3 class="font-weight-bold mb-3">Misi Kami</h3>
                     <ul class="mission-list">
-                        <li>Menyediakan 100% produk kaca film original dan bergaransi resmi.</li>
-                        <li>Memberikan layanan instalasi yang presisi, cepat, dan bersih oleh teknisi bersertifikat.</li>
-                        <li>Menjamin kepuasan penuh setiap pelanggan melalui konsultasi profesional dan layanan purna jual
-                            yang responsif.</li>
-                        <li>Terus berinovasi dalam teknik pemasangan dan pilihan produk untuk memenuhi kebutuhan pasar.</li>
+                        <li>Memberikan pelayabab ramah dan professional
+                            kepada pelangan dengan optimal.</li>
+                        <li>Memberikan informasi yang akurat serta memberikan
+                            saran dan rekomendasi yang tepat sesuai dengan
+                            kebutuhan pelanggan.</li>
+                        <li>Menjaga kualias kaca film dengan mengikuti standar
+                            yang ketat dalam pemasangan.</li>
+                        <li>Membangun reputasi sebagai penyedia layanan kaca
+                            film yang dapat di percaya.</li>
                     </ul>
                 </div>
             </div>
@@ -70,47 +84,67 @@
 
     <section class="section-padding">
         <div class="container">
-            <div class="row text-center mb-5">
-                <div class="col-12">
-                    <h2 class="font-weight-bold">Nilai-Nilai Inti Kami</h2>
-                    <p class="lead" style="color: #ccc;">Empat pilar yang menjadi fondasi kepercayaan pelanggan kami.</p>
-                </div>
+            <div class="section-title">
+                <h2>Nilai-Nilai Inti Kami</h2>
+                <p>
+                    Pilar yang menjadi fondasi kepercayaan pelanggan kami.
+                </p>
             </div>
-            <div class="row">
-                <!-- Item 1: Garansi -->
-                <div class="col-md-6 col-lg-3 mb-4">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <span class="feature-icon"><i class="fas fa-certificate"></i></span>
+                        <h5>Authorizerd Dealer</h5>
+                        <p>Kami adalah dealre resmi untuk produk-produk kaca film terkemuka. Melalui kerjasama resmi dengan
+                            produsen, kami memiliki akses langsung ke produk asli berkualitas tinggi, keaslian produk kami
+                            dijamin, memberikan Anda keyakinan akan kualitas yang bertanding.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="feature-box">
                         <span class="feature-icon"><i class="fas fa-shield-alt"></i></span>
                         <h5>Garansi Resmi</h5>
-                        <p>Kami hanya menjual produk asli dengan kartu garansi resmi dari distributor. Kenyamanan Anda
-                            terjamin penuh selama bertahun-tahun.</p>
+                        <p>Kami memberikan garansi resmi atas produk dan layanan pemasangan kami. Ini menjamin bahwa Anda
+                            mendapatkan layanan purna jual yang memadai, serta jaminan bahwa produk yang Anda beli
+                            terlindung dengan
+                            baik.</p>
                     </div>
                 </div>
-                <!-- Item 2: Profesional -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="feature-box">
                         <span class="feature-icon"><i class="fas fa-user-cog"></i></span>
                         <h5>Teknisi Profesional</h5>
-                        <p>Tim installer kami telah tersertifikasi dan sangat berpengalaman, memastikan pemasangan yang
-                            presisi, rapi, dan tanpa cacat.</p>
+                        <p>Tim kami terdiri dari teknisi-teknisi berpengalaman dan terlatih dengan baik dalam pemasangan
+                            kaca film. Mereka menguasai teknik pemasangan yang tepat dan memastikan setiap langkah proses
+                            pemasangan dilakukan dengan presisi tinggi, sehingga memberikan hasil yang memuaskan.</p>
                     </div>
                 </div>
-                <!-- Item 3: Original -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="feature-box">
                         <span class="feature-icon"><i class="fas fa-thumbs-up"></i></span>
-                        <h5>Produk Original</h5>
-                        <p>Jaminan 100% produk asli dari merek-merek terbaik dunia. Hati-hati barang tiruan, percayakan
-                            hanya pada kami sebagai distributor resmi.</p>
+                        <h5>Produk Original 100%</h5>
+                        <p>Kami menawarkan kaca film yang sepenuhnya asli dengan standar kualitas yang diberikan oleh
+                            produsen. Produk ini dirancang untuk memberikan perlindungan maksimal dan kenyamanan Bagi
+                            Pelanggan kami.</p>
                     </div>
                 </div>
-                <!-- Item 4: Presisi -->
-                <div class="col-md-6 col-lg-3 mb-4">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="feature-box">
-                        <span class="feature-icon"><i class="fas fa-check-circle"></i></span>
+                        <span class="feature-icon"><i class="fas fa-ruler-combined"></i></span>
                         <h5>Hasil Presisi</h5>
                         <p>Detail adalah kunci. Kami menggunakan SOP ketat dan alat modern untuk menjamin hasil pemasangan
-                            yang rapi, bersih, dan sempurna.</p>
+                            yang rapi, bersih, dan sempurna. Setiap sudut dan lekukan diperhatikan dengan seksama untuk
+                            memastikan tampilan akhir yang profesional dan estetis.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="feature-box">
+                        <span class="feature-icon"><i class="fas fa-dollar-sign"></i></span>
+                        <h5>Harga Kompetitif</h5>
+                        <p>Kami Berkomitmen untuk memberikan harga yang kompetitif tanpa memngorbankan kualitas. Kami
+                            mengerti bahwa pelanggan mencari nilai terbaik untuk uang mereka, dan kami menawarkan harga yang
+                            bersaing untuk memberikan solusi kaca film yang berkualitas tanpa menguras kantong.</p>
                     </div>
                 </div>
             </div>

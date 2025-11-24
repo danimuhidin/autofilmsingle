@@ -52,6 +52,7 @@
                     Berikut adalah beberapa produk kaca film unggulan yang kami tawarkan. Setiap produk dirancang
                     untuk memberikan performa terbaik dalam menolak panas, melindungi dari sinar UV, dan meningkatkan
                     kenyamanan.
+                </p>
             </div>
 
             <div class="row d-flex justify-content-center">
@@ -67,8 +68,8 @@
                             </p>
                             <ul class="list-unstyled small my-2">
                                 <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 70%</li>
-                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UV Rejection:</strong> 99.9%</li>
-                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>TSER (Tolak Panas):</strong>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99.9%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
                                     Hingga 62%</li>
                             </ul>
                             <a href="{{ URL::to('detail-produk/3m-autofilm') }}" class="btn btn-merah mt-auto">Lihat Detail</a>
@@ -87,8 +88,8 @@
                             </p>
                             <ul class="list-unstyled small my-2">
                                 <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
-                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UV Rejection:</strong> 99%</li>
-                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>TSER (Tolak Panas):</strong>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
                                     Hingga 55%</li>
                             </ul>
                             <a href="{{ URL::to('detail-produk/iceview') }}" class="btn btn-merah mt-auto">Lihat Detail</a>
@@ -107,8 +108,8 @@
                             </p>
                             <ul class="list-unstyled small my-2">
                                 <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
-                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UV Rejection:</strong> 99%</li>
-                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>TSER (Tolak Panas):</strong>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
                                     Hingga 55%</li>
                             </ul>
                             <a href="{{ URL::to('detail-produk/ilumi-window-film') }}" class="btn btn-merah mt-auto">Lihat Detail</a>
@@ -127,8 +128,8 @@
                             </p>
                             <ul class="list-unstyled small my-2">
                                 <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
-                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UV Rejection:</strong> 99%</li>
-                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>TSER (Tolak Panas):</strong>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
                                     Hingga 55%</li>
                             </ul>
                             <a href="{{ URL::to('detail-produk/llumar') }}" class="btn btn-merah mt-auto">Lihat Detail</a>
@@ -147,8 +148,8 @@
                             </p>
                             <ul class="list-unstyled small my-2">
                                 <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
-                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UV Rejection:</strong> 99%</li>
-                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>TSER (Tolak Panas):</strong>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
                                     Hingga 55%</li>
                             </ul>
                             <a href="{{ URL::to('detail-produk/n1-window-film') }}" class="btn btn-merah mt-auto">Lihat Detail</a>
@@ -167,8 +168,8 @@
                             </p>
                             <ul class="list-unstyled small my-2">
                                 <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
-                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UV Rejection:</strong> 99%</li>
-                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>TSER (Tolak Panas):</strong>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
                                     Hingga 55%</li>
                             </ul>
                             <a href="{{ URL::to('detail-produk/perfections') }}" class="btn btn-merah mt-auto">Lihat Detail</a>
@@ -188,8 +189,8 @@
                             </p>
                             <ul class="list-unstyled small my-2">
                                 <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
-                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UV Rejection:</strong> 99%</li>
-                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>TSER (Tolak Panas):</strong>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
                                     Hingga 55%</li>
                             </ul>
                             <a href="{{ URL::to('detail-produk/solar-gard-premium') }}" class="btn btn-merah mt-auto">Lihat Detail</a>
@@ -208,8 +209,8 @@
                             </p>
                             <ul class="list-unstyled small my-2">
                                 <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 20% - 80%</li>
-                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UV Rejection:</strong> 99%</li>
-                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>TSER (Tolak Panas):</strong>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
                                     Hingga 55%</li>
                             </ul>
                             <a href="{{ URL::to('detail-produk/una-gard') }}" class="btn btn-merah mt-auto">Lihat Detail</a>
@@ -228,8 +229,8 @@
                             </p>
                             <ul class="list-unstyled small my-2">
                                 <li><i class="fas fa-sun fa-fw"></i> <strong>VLT (Kegelapan):</strong> 40% - 70%</li>
-                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UV Rejection:</strong> 99.9%</li>
-                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>TSER (Tolak Panas):</strong>
+                                <li><i class="fas fa-shield-alt fa-fw"></i> <strong>UVR (Tolak Sinar UV):</strong> 99.9%</li>
+                                <li><i class="fas fa-thermometer-half fa-fw"></i> <strong>IRR (Tolak Panas):</strong>
                                     Hingga 70%</li>
                             </ul>
                             <a href="{{ URL::to('detail-produk/v-kool') }}" class="btn btn-merah mt-auto">Lihat Detail</a>

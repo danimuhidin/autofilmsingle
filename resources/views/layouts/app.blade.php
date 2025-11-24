@@ -95,10 +95,12 @@
                             <i class="fas fa-map-marker-alt"></i> Jl. Mekar Puspita No.23, Bandung
                         </p>
                         <p>
-                            <i class="fas fa-phone-alt"></i> 081244000805
+                            <i class="fas fa-phone-alt"></i> 
+                            <a class="text-white-50" href="https://wa.me/6282121218805" target="_blank">0821-2121-8805</a>
                         </p>
                         <p>
-                            <i class="fas fa-envelope"></i> hq@mantrasakti.com
+                            <i class="fas fa-envelope"></i> 
+                            <a class="text-white-50" href="mailto:mantrasaktiautofilm@gmail.com">mantrasaktiautofilm@gmail.com</a>
                         </p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4">
@@ -123,16 +125,19 @@
 
         <div class="wa-bubble-wrapper">
             <div id="wa-menu">
+                <a href="https://wa.me/6282121218805" target="_blank">
+                    <i class="fas fa-map-pin"></i> Mantra Sakti Pusat
+                </a>
                 <a href="https://wa.me/6281244000805" target="_blank">
                     <i class="fas fa-map-pin"></i> Outlet Bandung
                 </a>
                 <a href="https://wa.me/6281323230805" target="_blank">
                     <i class="fas fa-map-pin"></i> Outlet Bekasi
                 </a>
-                <a href="https://wa.me/082110002805" target="_blank">
+                <a href="https://wa.me/6282110002805" target="_blank">
                     <i class="fas fa-map-pin"></i> Outlet Tangerang
                 </a>
-                <a href="https://wa.me/081211009805" target="_blank">
+                <a href="https://wa.me/6282110002805" target="_blank">
                     <i class="fas fa-map-pin"></i> Outlet Cibubur
                 </a>
             </div>

@@ -77,38 +77,6 @@
                 <div class="card partner-card h-100">
                     <div class="card-body text-center">
                         <h6 class="text-center mb-2">
-                            <b>AUTOMOBO ( DETAILING & COATING )</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Ruko Mendrisio 3 Blok C No 3 Cihuni, Kec Pagedangan Kab. Tangerang, Banten
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 085218318696
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>AVIS COVER JOK SANGKURIANG CARWASH</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Jl Sangkuriang No 55, Cipageran, Kec.Cimahi Utara, Kota Cimahi, Jawa Barat 40511.
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 081284987820
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
                             <b>SCUTO SUDIRMAN</b>
                         </h6>
                         <p class="card-text text-white-50">
@@ -152,6 +120,71 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body text-center">
+                        <h6 class="text-center mb-2">
+                            <b>STEVE GARAGE BANDUNG - CAR SERVICE & REPAIR</b>
+                        </h6>
+                        <p class="card-text text-white-50">
+                            Jl. Kuta Mangu No.18, Cibaduyut Wetan, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat.
+                        </p>
+                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
+                            <i class="fas fa-phone-alt"></i> 081573000589
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body text-center">
+                        <h6 class="text-center mb-2">
+                            <b>Stroban Auto Care - Bandung</b>
+                        </h6>
+                        <p class="card-text text-white-50">
+                            Jl. Moch. Toha No.315, Ciseureuh, Kec. Regol, Kota Bandung, Jawa Barat.
+                        </p>
+                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
+                            <i class="fas fa-phone-alt"></i> 08982711717
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body text-center">
+                        <h6 class="text-center mb-2">
+                            <b>Stroban Auto Care - BSD</b>
+                        </h6>
+                        <p class="card-text text-white-50">
+                            Jl. Raya Serpong No.Km 15, Kademangan, Kec. Setu, Kota Tangerang Selatan, Banten.
+                        </p>
+                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
+                            <i class="fas fa-phone-alt"></i> 02135294339
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 mb-4">
+                <div class="card partner-card h-100">
+                    <div class="card-body text-center">
+                        <h6 class="text-center mb-2">
+                            <b>Mangundana Autocare Bandung</b>
+                        </h6>
+                        <p class="card-text text-white-50">
+                            Jl. Kota Bali Residence No.18, Kertajaya, Kec. Padalarang, Kabupaten Bandung Barat, Jawa Barat.
+                        </p>
+                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
+                            <i class="fas fa-phone-alt"></i> 08132101112
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
