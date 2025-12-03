@@ -8,14 +8,19 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'Admin Panel')</title>
+    <link rel="icon" type="image/png" href="{{ asset('storage/' . $bio->favicon) }}">
 
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 
-    <link rel="stylesheet" href="{{ asset('vendor/plugins/fontawesome-free/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/dist/css/adminlte.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('vendor/plugins/fontawesome-free/css/all.min.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet"
+        href="{{ asset('vendor/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/dist/css/adminlte.min.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet"
+        href="{{ asset('vendor/plugins/summernote/summernote-bs4.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}?v={{ env('ASSET_VERSION') }}">
 
     @yield('styles')
 </head>
@@ -46,7 +51,8 @@
             </nav>
             <aside class="main-sidebar sidebar-dark-primary elevation-4">
                 <a href="{{ route('admin.dashboard') }}" class="brand-link">
-                    <img src="{{ asset('storage/' . $bio->brand_img) }}" alt="{{ $bio->brand_name }}" class="img-fluid">
+                    <img src="{{ asset('storage/' . $bio->brand_img) }}" alt="{{ $bio->brand_name }}"
+                        class="img-fluid">
                 </a>
 
                 <div class="sidebar">
@@ -176,13 +182,15 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('missions.index') }}" class="nav-link {{ request()->is('admin/missions*') ? 'active' : '' }}">
+                                        <a href="{{ route('missions.index') }}"
+                                            class="nav-link {{ request()->is('admin/missions*') ? 'active' : '' }}">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Misi</p>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ route('posts.index') }}" class="nav-link {{ request()->is('admin/posts*') ? 'active' : '' }}">
+                                        <a href="{{ route('posts.index') }}"
+                                            class="nav-link {{ request()->is('admin/posts*') ? 'active' : '' }}">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Keunggulan</p>
                                         </a>
@@ -231,14 +239,32 @@
         </footer>
 
     </div>
-    <script src="{{ asset('vendor/plugins/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/plugins/jquery/jquery.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
 
-    <script src="{{ asset('vendor/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('vendor/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
-    <script src="{{ asset('vendor/plugins/chart.js/Chart.min.js') }}"></script>
-
-    <script src="{{ asset('vendor/dist/js/adminlte.min.js') }}"></script>
-
+    <script src="{{ asset('vendor/plugins/bootstrap/js/bootstrap.bundle.min.js') }}?v={{ env('ASSET_VERSION') }}">
+    </script>
+    <script src="{{ asset('vendor/plugins/sweetalert2/sweetalert2.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
+    <script src="{{ asset('vendor/plugins/chart.js/Chart.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
+    <script src="{{ asset('vendor/plugins/summernote/summernote-bs4.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
+    <script src="{{ asset('vendor/dist/js/adminlte.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('.summernote').summernote({
+                toolbar: [
+                    ['style', ['bold', 'italic']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['insert', ['table']]
+                ],
+                popover: {
+                    air: [
+                        ['style', ['bold', 'italic']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['insert', ['table']]
+                    ]
+                }
+            });
+        });
+    </script>
     @stack('scripts')
 
 </body>

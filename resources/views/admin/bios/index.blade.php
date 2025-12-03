@@ -75,14 +75,15 @@
                                     <td><b>TikTok : </b>{{ $bio->tiktok_name ?? '-' }}</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Maps Embed Link : </b>{{ $bio->link_maps_embed ?? '-' }}</td>
+                                    <td><b>Maps Embed Link : </b>{{ Str::limit($bio->link_maps_embed, 50, '...') ?? '-' }}
+                                    </td>
                                     <td></td>
                                     <td><b>Maps Direction Link : </b>{{ $bio->link_maps_direction ?? '-' }}</td>
                                 </tr>
                                 <tr>
-                                    <td><b>Greeting Home : </b>{{ Str::limit($bio->greeting_home, 50, '...') }}</td>
+                                    <td><b>Greeting Home : </b>{!! Str::limit($bio->greeting_home, 50, '...') !!}</td>
                                     <td></td>
-                                    <td><b>Greeting About : </b>{{ Str::limit($bio->greeting_about, 50, '...') }}</td>
+                                    <td><b>Greeting About : </b>{!! Str::limit($bio->greeting_about, 50, '...') !!}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -181,7 +182,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="greeting_home">Greeting Home</label>
-                                    <textarea class="form-control" id="greeting_home" name="greeting_home" rows="3"
+                                    <textarea class="summernote form-control" id="greeting_home" name="greeting_home" rows="3"
                                         placeholder="Enter greeting for home page"></textarea>
                                     <span class="text-danger error-text greeting_home_error"></span>
                                 </div>
@@ -189,7 +190,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="greeting_about">Greeting About</label>
-                                    <textarea class="form-control" id="greeting_about" name="greeting_about" rows="3"
+                                    <textarea class="summernote form-control" id="greeting_about" name="greeting_about" rows="3"
                                         placeholder="Enter greeting for about page"></textarea>
                                     <span class="text-danger error-text greeting_about_error"></span>
                                 </div>
@@ -280,16 +281,16 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="link_maps_embed">Maps Embed Link</label>
-                                    <textarea class="form-control" id="link_maps_embed" name="link_maps_embed" rows="2"
-                                        placeholder="Enter google maps embed link"></textarea>
+                                    <input class="form-control" id="link_maps_embed" name="link_maps_embed"
+                                        rows="2" placeholder="Enter google maps embed link"></input>
                                     <span class="text-danger error-text link_maps_embed_error"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="link_maps_direction">Maps Direction Link</label>
-                                    <textarea class="form-control" id="link_maps_direction" name="link_maps_direction" rows="2"
-                                        placeholder="Enter google maps direction link"></textarea>
+                                    <input class="form-control" id="link_maps_direction" name="link_maps_direction"
+                                        rows="2" placeholder="Enter google maps direction link"></input>
                                     <span class="text-danger error-text link_maps_direction_error"></span>
                                 </div>
                             </div>
@@ -356,6 +357,10 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
+
+            $('#greeting_home').summernote();
+            $('#greeting_about').summernote();
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -435,6 +440,8 @@
             $('#modalTitle').text('Add Bio');
             $('.error-text').text('');
             $('#favicon_preview, #brand_img_preview, #img_home_preview, #img_about_preview').html('');
+            $('#greeting_home').summernote('code', '');
+            $('#greeting_about').summernote('code', '');
         }
 
         function editBio(id) {
@@ -449,8 +456,8 @@
                     $('#title').val(data.title);
                     $('#brand_name').val(data.brand_name);
                     $('#tagline').val(data.tagline);
-                    $('#greeting_home').val(data.greeting_home);
-                    $('#greeting_about').val(data.greeting_about);
+                    $('#greeting_home').summernote('code', data.greeting_home || '');
+                    $('#greeting_about').summernote('code', data.greeting_about || '');
                     $('#address').val(data.address);
                     $('#telp').val(data.telp);
                     $('#whatsapp').val(data.whatsapp);

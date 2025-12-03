@@ -2,40 +2,65 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
+use App\Models\Hero;
+use App\Models\Jumbotron;
+use App\Models\Mission;
+use App\Models\Outlet;
+use App\Models\Partner;
+use App\Models\Post;
+use App\Models\Product;
+use App\Models\Testimonial;
+use App\Models\Vision;
+use App\Models\Youtube;
+
 class HomeController extends Controller
 {
-//     Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::get('/about', [HomeController::class, 'about'])->name('about');
-// Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-// Route::get('/detail-produk', [HomeController::class, 'detail_produk'])->name('detail-produk');
-// Route::get('/kategori-produk', [HomeController::class, 'kategori_produk'])->name('kategori-produk');
-// Route::get('/galeri', [HomeController::class, 'galeri'])->name('galeri');
-// Route::get('/outlet', [HomeController::class, 'outlet'])->name('outlet');
-// Route::get('/partner', [HomeController::class, 'partner'])->name('partner');
     public function index()
     {
-        return view('home');
+        $jumbotrons = Jumbotron::all();
+        $outlets = Outlet::all();
+        $products = Product::all();
+        $keunggulans = Post::all();
+        $galleries = Gallery::all();
+        $youtubes = Youtube::all();
+        $testimonials = Testimonial::all();
+
+        return view('home', compact(
+            'jumbotrons', 'outlets', 'products', 'keunggulans', 'galleries', 'youtubes', 'testimonials'
+        ));
     }
 
     public function about()
     {
-        return view('about');
+        $hero = Hero::where('id', 3)->first();
+        $vision = Vision::first();
+        $mission = Mission::all();
+        $keunggulans = Post::all();
+        return view('about', compact('hero', 'vision', 'mission', 'keunggulans'));
     }
 
     public function contact()
     {
-        return view('contact');
+        $hero = Hero::where('id', 4)->first();
+        $outlets = Outlet::all();
+        return view('contact', compact('hero', 'outlets'));
     }
 
     public function produk()
     {
-        return view('produk');
+        $hero = Hero::where('id', 1)->first();
+        $products = Product::all();
+        return view('produk', compact('hero', 'products'));
     }
 
-    public function detail_produk($name)
+    public function detail_produk($id)
     {
-        $name = str_replace('-', ' ', $name);
-        return view('detail-produk', ['name' => $name]);
+        $hero = Hero::where('id', 1)->first();
+        $product = Product::findOrFail($id);
+        $otherProducts = Product::where('id', '!=', $id)->get();
+
+        return view('detail-produk', compact('hero', 'product', 'otherProducts'));
     }
 
     public function kategori_produk()
@@ -45,16 +70,23 @@ class HomeController extends Controller
 
     public function galeri()
     {
-        return view('galeri');
+        $hero = Hero::where('id', 2)->first();
+        $galleries = Gallery::all();
+        return view('galeri', compact('hero', 'galleries'));
     }
 
     public function outlet()
     {
-        return view('outlet');
+        $hero = Hero::where('id', 5)->first();
+        $outlets = Outlet::all();
+        return view('outlet', compact('hero', 'outlets'));
     }
 
     public function partner()
     {
-        return view('partner');
+        $hero = Hero::where('id', 6)->first();
+        $partners = Partner::all();
+        $products = Product::all();
+        return view('partner', compact('hero', 'partners', 'products'));
     }
 }

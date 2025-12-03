@@ -5,10 +5,10 @@
 
 @section('content')
 
-    <section class="page-hero container-fluid" style="background-image: url({{ asset('images/hero/galeri.png') }});">
+    <section class="page-hero container-fluid" style="background-image: url({{ asset('storage/' . $hero->image) }});">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="display-4 font-weight-bold">Galeri Portofolio Kami</h1>
+            <h1 class="display-4 font-weight-bold">{{ $hero->title }}</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ URL::to('/') }}">Home</a></li>
@@ -22,8 +22,8 @@
         <div class="container">
             <div class="btn-group filter-btn-group" role="group" aria-label="Filter Galeri">
                 <button type="button" class="btn active" data-filter="*">Semua</button>
-                <button type="button" class="btn" data-filter=".mobil">Kaca Film Mobil</button>
-                <button type="button" class="btn" data-filter=".gedung">Kaca Film Gedung</button>
+                <button type="button" class="btn" data-filter=".Mobil">Kaca Film Mobil</button>
+                <button type="button" class="btn" data-filter=".Gedung">Kaca Film Gedung</button>
             </div>
         </div>
     </section>
@@ -31,108 +31,18 @@
     <section class="gallery-grid">
         <div class="container">
             <div class="row gallery-container">
-
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper mobil">
-                    <div class="gallery-item">
-                        <a href="{{ asset('images/galeri/g1.jpg') }}"
-                            data-lightbox="galeri-portofolio" data-title="Pemasangan Llumar">
-                            <img src="{{ asset('images/galeri/g1.jpg') }}" class="img-fluid"
-                                alt="Pemasangan Llumar">
-                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
-                        </a>
+                @foreach ($galleries as $gallery)
+                    <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper {{ $gallery->category }}">
+                        <div class="gallery-item">
+                            <a href="{{ asset('storage/' . $gallery->image) }}" data-lightbox="galeri-portofolio"
+                                data-title="{{ $gallery->title }}">
+                                <img src="{{ asset('storage/' . $gallery->image) }}" class="img-fluid"
+                                    alt="{{ $gallery->title }}">
+                                <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper gedung">
-                    <div class="gallery-item">
-                        <a href="{{ asset('images/galeri/p1.png') }}"
-                            data-lightbox="galeri-portofolio"
-                            data-title="Pemasangan Kaca Film Oneway di Gedung Perkantoran">
-                            <img src="{{ asset('images/galeri/p1.png') }}" class="img-fluid"
-                                alt="Pemasangan Kaca Film Gedung">
-                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper mobil">
-                    <div class="gallery-item">
-                        <a href="{{ asset('images/galeri/g2.jpg') }}"
-                            data-lightbox="galeri-portofolio" data-title="Pemasangan Kaca Film Depan">
-                            <img src="{{ asset('images/galeri/g2.jpg') }}" class="img-fluid"
-                                alt="Pemasangan Kaca Film Depan">
-                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper mobil">
-                    <div class="gallery-item">
-                        <a href="{{ asset('images/galeri/g3.jpg') }}"
-                            data-lightbox="galeri-portofolio" data-title="Pemasangan Kaca Film 3M Cristalline">
-                            <img src="{{ asset('images/galeri/g3.jpg') }}" class="img-fluid"
-                                alt="Pemasangan Kaca Film 3M Cristalline">
-                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper gedung">
-                    <div class="gallery-item">
-                        <a href="{{ asset('images/galeri/p2.png') }}"
-                            data-lightbox="galeri-portofolio" data-title="Pemasangan Stiker Sandblast di Ruko Minimalis">
-                            <img src="{{ asset('images/galeri/p2.png') }}" class="img-fluid"
-                                alt="Pemasangan Stiker Sandblast Ruko">
-                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper gedung">
-                    <div class="gallery-item">
-                        <a href="{{ asset('images/galeri/p3.png') }}"
-                            data-lightbox="galeri-portofolio" data-title="Pemasangan Kaca Film Riben di Jendela Kafe">
-                            <img src="{{ asset('images/galeri/p3.png') }}" class="img-fluid"
-                                alt="Pemasangan Kaca Film Kafe">
-                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper mobil">
-                    <div class="gallery-item">
-                        <a href="{{ asset('images/galeri/g7.jpg') }}" data-lightbox="galeri-portofolio"
-                            data-title="Pemasangan Solar Gard">
-                            <img src="{{ asset('images/galeri/g7.jpg') }}" class="img-fluid"
-                                alt="Pemasangan Solar Gard">
-                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper mobil">
-                    <div class="gallery-item">
-                        <a href="{{ asset('images/galeri/g5.jpg') }}"
-                            data-lightbox="galeri-portofolio"
-                            data-title="Pemasangan Kaca Film Ilumi">
-                            <img src="{{ asset('images/galeri/g5.jpg') }}" class="img-fluid"
-                                alt="Pemasangan Kaca Film Ilumi">
-                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 gallery-item-wrapper gedung">
-                    <div class="gallery-item">
-                        <a href="{{ asset('images/galeri/p4.png') }}"
-                            data-lightbox="galeri-portofolio" data-title="Pemasangan Kaca Film di Balkon Apartemen">
-                            <img src="{{ asset('images/galeri/p4.png') }}" class="img-fluid"
-                                alt="Pemasangan Kaca Film Apartemen">
-                            <div class="overlay-icon"><i class="fas fa-search-plus"></i></div>
-                        </a>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
         </div>
     </section>

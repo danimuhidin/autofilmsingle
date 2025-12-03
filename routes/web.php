@@ -18,7 +18,7 @@ Route::get('/outlet', [HomeController::class, 'outlet'])->name('outlet');
 Route::get('/partner', [HomeController::class, 'partner'])->name('partner');
 Route::get('/produk', [HomeController::class, 'produk'])->name('produk');
 // Route::get('/detail-produk', [HomeController::class, 'detail_produk'])->name('detail-produk');
-Route::get('/detail-produk/{name}', [HomeController::class, 'detail_produk'])->name('detail-produk');
+Route::get('/detail-produk/{id}', [HomeController::class, 'detail_produk'])->name('detail-produk');
 Route::get('/kategori-produk', [HomeController::class, 'kategori_produk'])->name('kategori-produk');
 
 Auth::routes();

@@ -5,10 +5,10 @@
 
 @section('content')
 
-    <section class="page-hero container-fluid" style="background-image: url({{ asset('images/hero/partner.png') }});">
+    <section class="page-hero container-fluid" style="background-image: url({{ asset('storage/' . $hero->image) }});">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="display-4 font-weight-bold">Partner & Jaringan Kami</h1>
+            <h1 class="display-4 font-weight-bold">{{ $hero->title }}</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ URL::to('/') }}">Home</a></li>
@@ -22,7 +22,8 @@
         <div class="row">
             <div class="col-md-10 offset-md-1 text-center">
                 <h2 class="mb-4">Komitmen pada Keaslian dan Kemitraan</h2>
-                <p class="lead" style="color: var(--light-gray);">Di {{ $bio->brand_name }}, kami percaya bahwa bisnis yang
+                <p class="lead" style="color: var(--light-gray);">Di {{ $bio->brand_name }}, kami percaya bahwa bisnis
+                    yang
                     hebat dibangun di atas kepercayaan. Itulah mengapa kami hanya bermitra dengan brand-brand terbaik dunia
                     dan memastikan setiap produk yang kami distribusikan adalah 100% otentik dan bergaransi resmi.</p>
                 <p>Kami mendedikasikan diri untuk membangun kemitraan jangka panjang yang saling menguntungkan, baik dengan
@@ -41,150 +42,24 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>STAR KACA FILM SUMMARECON BEKASI</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Axc Summarecon No VE 12 / VE 15, Marga Mulya, Kec. Bekasi Utara, Kota Bks, Jawa Barat 17142
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 081212096805
-                        </a>
+            @foreach ($partners as $partner)
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <div class="card partner-card h-100">
+                        <div class="card-body text-center">
+                            <h6 class="text-center mb-2">
+                                <b>{{ $partner->name }}</b>
+                            </h6>
+                            <p class="card-text text-white-50">
+                                {{ $partner->address }}
+                            </p>
+                            <a target="_blank" href="https://wa.me/{{ format_whatsapp($partner->telp) }}"
+                                class="btn btn-kuning btn-sm">
+                                <i class="fas fa-phone-alt"></i> {{ $partner->telp }}
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>STIKERINDO ( JASA PRINTING STIKER )</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Jl Parakan No 28 , Pondok Benda, Kec Pamulang, Kota Tangerang Selatan, Banten 15416
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 081218692589
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>SCUTO SUDIRMAN</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Jl Jendral Sudirman No 631b wr Muncang Kec Bandung Kulon.
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 081288887123
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>AUTOMOBO</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Jl Caringin No 27 , Babakan Ciparay, Kota Bandung,  Jawa Barat 40223.
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 08324730209
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>JAGOAN STIKER</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Jl Sukapura No 64 Kec Dayeuhkolot, Kota Bandung, Jawa Barat.
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 081220459994
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>STEVE GARAGE BANDUNG - CAR SERVICE & REPAIR</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Jl. Kuta Mangu No.18, Cibaduyut Wetan, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat.
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 081573000589
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>Stroban Auto Care - Bandung</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Jl. Moch. Toha No.315, Ciseureuh, Kec. Regol, Kota Bandung, Jawa Barat.
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 08982711717
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>Stroban Auto Care - BSD</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Jl. Raya Serpong No.Km 15, Kademangan, Kec. Setu, Kota Tangerang Selatan, Banten.
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 02135294339
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 mb-4">
-                <div class="card partner-card h-100">
-                    <div class="card-body text-center">
-                        <h6 class="text-center mb-2">
-                            <b>Mangundana Autocare Bandung</b>
-                        </h6>
-                        <p class="card-text text-white-50">
-                            Jl. Kota Bali Residence No.18, Kertajaya, Kec. Padalarang, Kabupaten Bandung Barat, Jawa Barat.
-                        </p>
-                        <a target="_blank" href="#" class="btn btn-kuning btn-sm">
-                            <i class="fas fa-phone-alt"></i> 08132101112
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </section>
 
@@ -197,24 +72,11 @@
                 </div>
             </div>
             <div class="owl-carousel owl-theme logo-carousel">
-                <div class="item"><img src="{{ asset('images/brand/3m.png') }}" alt="ourbrand">
-                </div>
-                <div class="item"><img src="{{ asset('images/brand/ice.png') }}" alt="ourbrand">
-                </div>
-                <div class="item"><img src="{{ asset('images/brand/ilumi.png') }}" alt="ourbrand">
-                </div>
-                <div class="item"><img src="{{ asset('images/brand/llumar.png') }}" alt="ourbrand">
-                </div>
-                <div class="item"><img src="{{ asset('images/brand/n1.png') }}" alt="ourbrand">
-                </div>
-                <div class="item"><img src="{{ asset('images/brand/solar.png') }}" alt="ourbrand">
-                </div>
-                <div class="item"><img src="{{ asset('images/brand/perfect.png') }}" alt="ourbrand">
-                </div>
-                <div class="item"><img src="{{ asset('images/brand/una.png') }}" alt="ourbrand">
-                </div>
-                <div class="item"><img src="{{ asset('images/brand/vkool.png') }}" alt="ourbrand">
-                </div>
+                @foreach ($products as $product)
+                    <div class="item">
+                        <img src="{{ asset('storage/' . $product->icon) }}" alt="{{ $product->name }}">
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

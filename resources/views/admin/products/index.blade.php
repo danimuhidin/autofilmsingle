@@ -9,8 +9,8 @@
                 <div class="card-header">
                     <h3 class="card-title">Daftar Produk</h3>
                     <div class="card-tools">
-                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
-                            data-target="#productModal" onclick="resetForm()">
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#productModal"
+                            onclick="resetForm()">
                             <i class="fas fa-plus"></i> Tambah Produk
                         </button>
                     </div>
@@ -151,55 +151,62 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="item_desc">Deskripsi Item</label>
-                                    <textarea class="form-control" id="item_desc" name="item_desc" rows="3" placeholder="Masukkan deskripsi item"></textarea>
-                                    <span class="text-danger error-text item_desc_error"></span>
+                                    <label for="term_desc">Deskripsi Ketentuan</label>
+                                    <textarea class="form-control" id="term_desc" name="term_desc" rows="3"
+                                        placeholder="Masukkan deskripsi ketentuan"></textarea>
+                                    <span class="text-danger error-text term_desc_error"></span>
                                 </div>
                             </div>
+
                         </div>
 
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <label for="item_desc">Deskripsi Item</label>
+                                    <textarea class="summernote form-control" id="item_desc" name="item_desc" rows="3"
+                                        placeholder="Masukkan deskripsi item"></textarea>
+                                    <span class="text-danger error-text item_desc_error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
                                     <label for="price_desc">Deskripsi Harga</label>
-                                    <textarea class="form-control" id="price_desc" name="price_desc" rows="3"
+                                    <textarea class="summernote form-control" id="price_desc" name="price_desc" rows="3"
                                         placeholder="Masukkan deskripsi harga"></textarea>
                                     <span class="text-danger error-text price_desc_error"></span>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="full_desc">Deskripsi Lengkap</label>
-                                    <textarea class="form-control" id="full_desc" name="full_desc" rows="3" placeholder="Masukkan deskripsi lengkap"></textarea>
-                                    <span class="text-danger error-text full_desc_error"></span>
-                                </div>
-                            </div>
+
+
                         </div>
 
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="full_desc">Deskripsi Lengkap</label>
+                                    <textarea class="summernote form-control" id="full_desc" name="full_desc" rows="3"
+                                        placeholder="Masukkan deskripsi lengkap"></textarea>
+                                    <span class="text-danger error-text full_desc_error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="spec_desc">Deskripsi Spesifikasi</label>
-                                    <textarea class="form-control" id="spec_desc" name="spec_desc" rows="3"
+                                    <textarea class="summernote form-control" id="spec_desc" name="spec_desc" rows="3"
                                         placeholder="Masukkan deskripsi spesifikasi"></textarea>
                                     <span class="text-danger error-text spec_desc_error"></span>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="maintenance_desc">Deskripsi Pemeliharaan</label>
-                                    <textarea class="form-control" id="maintenance_desc" name="maintenance_desc" rows="3"
+                                    <textarea class="summernote form-control" id="maintenance_desc" name="maintenance_desc" rows="3"
                                         placeholder="Masukkan deskripsi pemeliharaan"></textarea>
                                     <span class="text-danger error-text maintenance_desc_error"></span>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="term_desc">Deskripsi Ketentuan</label>
-                                    <textarea class="form-control" id="term_desc" name="term_desc" rows="3" placeholder="Masukkan deskripsi ketentuan"></textarea>
-                                    <span class="text-danger error-text term_desc_error"></span>
-                                </div>
-                            </div>
+
                         </div>
 
                         <hr>
@@ -283,6 +290,23 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
+            // Initialize Summernote
+            $('#item_desc').summernote({
+                height: 150
+            });
+            $('#price_desc').summernote({
+                height: 150
+            });
+            $('#full_desc').summernote({
+                height: 150
+            });
+            $('#spec_desc').summernote({
+                height: 150
+            });
+            $('#maintenance_desc').summernote({
+                height: 150
+            });
+
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -368,6 +392,11 @@
             $('#modalTitle').text('Tambah Produk');
             $('.error-text').text('');
             $('#icon_preview, #img1_preview, #img2_preview, #img3_preview, #img4_preview, #img5_preview').html('');
+            $('#item_desc').summernote('code', '');
+            $('#price_desc').summernote('code', '');
+            $('#full_desc').summernote('code', '');
+            $('#spec_desc').summernote('code', '');
+            $('#maintenance_desc').summernote('code', '');
         }
 
         function editProduct(id) {
@@ -384,13 +413,14 @@
                     $('#uvr').val(data.uvr);
                     $('#irr').val(data.irr);
                     $('#tser').val(data.tser);
+                    // $('#short_desc').summernote('code', data.short_desc || '');
                     $('#short_desc').val(data.short_desc);
-                    $('#item_desc').val(data.item_desc);
-                    $('#price_desc').val(data.price_desc);
+                    $('#item_desc').summernote('code', data.item_desc || '');
+                    $('#price_desc').summernote('code', data.price_desc || '');
                     $('#price').val(data.price);
-                    $('#full_desc').val(data.full_desc);
-                    $('#spec_desc').val(data.spec_desc);
-                    $('#maintenance_desc').val(data.maintenance_desc);
+                    $('#full_desc').summernote('code', data.full_desc || '');
+                    $('#spec_desc').summernote('code', data.spec_desc || '');
+                    $('#maintenance_desc').summernote('code', data.maintenance_desc || '');
                     $('#term_desc').val(data.term_desc);
 
                     if (data.icon) {

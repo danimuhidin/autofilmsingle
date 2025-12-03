@@ -6,16 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', $bio->title)</title>
+    <link rel="icon" type="image/png" href="{{ asset('storage/' . $bio->favicon) }}">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-    <link rel="stylesheet" href="{{ asset('vendor/plugins/fontawesome-free/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/dist/css/adminlte.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/plugins/OwlCarousel2/owl.carousel.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/plugins/OwlCarousel2/owl.theme.default.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/plugins/lightbox2/lightbox.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <script src="{{ asset('vendor/plugins/jquery/jquery.min.js') }}"></script>
+    <link rel="stylesheet"
+        href="{{ asset('vendor/plugins/fontawesome-free/css/all.min.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet"
+        href="{{ asset('vendor/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/dist/css/adminlte.min.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet"
+        href="{{ asset('vendor/plugins/OwlCarousel2/owl.carousel.min.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet"
+        href="{{ asset('vendor/plugins/OwlCarousel2/owl.theme.default.min.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet"
+        href="{{ asset('vendor/plugins/lightbox2/lightbox.min.css') }}?v={{ env('ASSET_VERSION') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ env('ASSET_VERSION') }}">
+    <script src="{{ asset('vendor/plugins/jquery/jquery.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
     @yield('styles')
 </head>
 
@@ -25,7 +31,8 @@
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
                 <div class="container">
                     <a class="navbar-brand" href="{{ URL::to('/') }}">
-                        <img src="{{ asset('storage/' . $bio->brand_img) }}" alt="{{ $bio->brand_name }}" height="40">
+                        <img src="{{ asset('storage/' . $bio->brand_img) }}" alt="{{ $bio->brand_name }}"
+                            height="40">
                     </a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -71,9 +78,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <img class="mb-2" src="{{ asset('storage/' . $bio->brand_img) }}" alt="{{ $bio->brand_name }}"
-                            height="50">
-                        <p>{{ $bio->greeting_about }}</p>
+                        <img class="mb-2" src="{{ asset('storage/' . $bio->brand_img) }}"
+                            alt="{{ $bio->brand_name }}" height="50">
+                        <p>{!! $bio->greeting_about !!}</p>
                     </div>
                     <div class="col-lg-2 col-md-6 mb-4">
                         <h5>Quick Links</h5>
@@ -99,21 +106,16 @@
                         </p>
                         <p>
                             <i class="fas fa-envelope"></i>
-                            <a class="text-white-50"
-                                href="mailto:{{ $bio->email }}">{{ $bio->email }}</a>
+                            <a class="text-white-50" href="mailto:{{ $bio->email }}">{{ $bio->email }}</a>
                         </p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4">
                         <h5>Ikuti Kami</h5>
                         <p>Dapatkan info terbaru dan promo menarik.</p>
                         <div class="social-icons">
-                            <a target="_blank" href="{{ $bio->fb_link }}"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a target="_blank"
-                                href="{{ $bio->ig_link }}"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="{{ $bio->youtube_link }}"><i
-                                    class="fab fa-youtube"></i></a>
+                            <a target="_blank" href="{{ $bio->fb_link }}"><i class="fab fa-facebook-f"></i></a>
+                            <a target="_blank" href="{{ $bio->ig_link }}"><i class="fab fa-instagram"></i></a>
+                            <a target="_blank" href="{{ $bio->youtube_link }}"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -137,12 +139,13 @@
         </div>
     </div>
 
-    <script src="{{ asset('vendor/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('vendor/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
-    <script src="{{ asset('vendor/plugins/chart.js/Chart.min.js') }}"></script>
-    <script src="{{ asset('vendor/plugins/OwlCarousel2/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('vendor/plugins/lightbox2/lightbox.min.js') }}"></script>
-    <script src="{{ asset('vendor/dist/js/adminlte.min.js') }}"></script>
+    <script src="{{ asset('vendor/plugins/bootstrap/js/bootstrap.bundle.min.js') }}?v={{ env('ASSET_VERSION') }}">
+    </script>
+    <script src="{{ asset('vendor/plugins/sweetalert2/sweetalert2.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
+    <script src="{{ asset('vendor/plugins/chart.js/Chart.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
+    <script src="{{ asset('vendor/plugins/OwlCarousel2/owl.carousel.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
+    <script src="{{ asset('vendor/plugins/lightbox2/lightbox.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
+    <script src="{{ asset('vendor/dist/js/adminlte.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
     <script>
         $(window).scroll(function() {
             if ($(this).scrollTop() > 50) {

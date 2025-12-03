@@ -110,16 +110,16 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
-            // Fungsi untuk membersihkan form dan error
+
             function clearForm() {
                 $('#testimonialForm')[0].reset();
                 $('#testimonial_id').val('');
                 $('#form_method').val('');
                 $('.form-control').removeClass('is-invalid');
                 $('.text-danger').empty();
+                $('#desc').val('');
             }
 
-            // 1. Tampilkan Modal untuk TAMBAH Testimonial
             $('#btn-tambah-testimonial').click(function() {
                 clearForm();
                 $('#testimonialModalLabel').text('Tambah Testimoni Baru');
@@ -128,7 +128,6 @@
                 $('#testimonialModal').modal('show');
             });
 
-            // 2. Tampilkan Modal untuk EDIT Testimonial
             $('body').on('click', '.btn-edit', function() {
                 clearForm();
                 var testimonialId = $(this).data('id');
@@ -138,7 +137,6 @@
                 $('#form_method').val('PUT');
                 $('#testimonialForm').attr('action', '/admin/testimonials/' + testimonialId);
 
-                // Ambil data testimonial via AJAX
                 $.get(url, function(data) {
                     $('#testimonial_id').val(data.id);
                     $('#name').val(data.name);
@@ -154,7 +152,6 @@
                 });
             });
 
-            // 3. Proses SIMPAN (Store & Update) via AJAX
             $('#testimonialForm').submit(function(e) {
                 e.preventDefault();
 
@@ -167,7 +164,7 @@
 
                 $.ajax({
                     url: url,
-                    type: 'POST', // AJAX tetap POST, _method akan di-handle Laravel
+                    type: 'POST',
                     data: formData,
                     success: function(response) {
                         $('#testimonialModal').modal('hide');
@@ -183,7 +180,6 @@
                     },
                     error: function(xhr) {
                         if (xhr.status === 422) {
-                            // Tangani error validasi
                             var errors = xhr.responseJSON.errors;
                             $.each(errors, function(key, value) {
                                 $('#' + key).addClass('is-invalid');
@@ -200,7 +196,6 @@
                 });
             });
 
-            // 4. Proses HAPUS via AJAX
             $('body').on('submit', '.form-hapus', function(e) {
                 e.preventDefault();
 

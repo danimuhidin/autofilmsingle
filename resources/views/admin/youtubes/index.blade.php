@@ -82,8 +82,7 @@
                             <label for="link">Link <span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="link" name="link"
                                 placeholder="Masukkan link youtube">
-                            <small class="form-text text-muted">Contoh: https://www.youtube.com/watch?v=xxx atau
-                                https://youtu.be/xxx</small>
+                            <small class="form-text text-muted">Contoh: https://www.youtube.com/embed/</small>
                             <span class="text-danger error-text link_error"></span>
                         </div>
                     </div>

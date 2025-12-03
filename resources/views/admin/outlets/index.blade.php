@@ -118,7 +118,7 @@
 
                         <div class="form-group">
                             <label for="address">Alamat <span class="text-danger">*</span></label>
-                            <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                            <input class="form-control" id="address" name="address" rows="3" required></input>
                             <small id="address-error" class="text-danger"></small>
                         </div>
 

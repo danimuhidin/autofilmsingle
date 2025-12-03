@@ -109,7 +109,7 @@
 
                         <div class="form-group">
                             <label for="desc">Deskripsi</label>
-                            <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+                            <input class="form-control" id="desc" name="desc" rows="3"></input>
                             <small id="desc-error" class="text-danger"></small>
                         </div>
 
