@@ -16,8 +16,7 @@ class HeroController extends Controller
      */
     public function index()
     {
-        $heroes = Hero::orderBy('created_at', 'desc')
-            ->paginate(10);
+        $heroes = Hero::paginate(10);
 
         return view('admin.heroes.index', compact('heroes'));
     }

@@ -22,6 +22,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Produk</th>
+                                    <th>Jumlah Types</th>
                                     <th>Harga</th>
                                     <th>Icon</th>
                                     <th>Aksi</th>
@@ -32,6 +33,9 @@
                                     <tr>
                                         <td class="text-center">{{ $products->firstItem() + $index }}</td>
                                         <td>{{ $product->name }}</td>
+                                        <td class="text-center">
+                                            <span class="badge badge-primary">{{ $product->types->count() }}</span>
+                                        </td>
                                         <td>{{ $product->price ?? '-' }}</td>
                                         <td>
                                             @if ($product->icon)
@@ -42,6 +46,10 @@
                                             @endif
                                         </td>
                                         <td>
+                                            <button type="button" class="btn btn-success btn-sm"
+                                                onclick="manageTypes({{ $product->id }}, '{{ $product->name }}')">
+                                                <i class="fas fa-list"></i> Types
+                                            </button>
                                             <button type="button" class="btn btn-info btn-sm"
                                                 onclick="editProduct({{ $product->id }})">
                                                 <i class="fas fa-edit"></i>
@@ -285,6 +293,117 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal Product Types -->
+    <div class="modal fade" id="typesModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="typesModalTitle">Manage Product Types</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="current_product_id">
+
+                    <button type="button" class="btn btn-primary btn-sm mb-3" onclick="showAddTypeForm()">
+                        <i class="fas fa-plus"></i> Tambah Type
+                    </button>
+
+                    <div id="typesList" class="table-responsive">
+                        <!-- Types list will be loaded here -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Add/Edit Type -->
+    <div class="modal fade" id="typeFormModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="typeFormModalTitle">Tambah Type</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="typeForm" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <input type="hidden" id="type_id" name="type_id">
+                        <input type="hidden" id="type_product_id" name="product_id">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="type_name">Nama Type <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="type_name" name="name" required>
+                                    <span class="text-danger error-text type_name_error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="type_image">Gambar Type</label>
+                                    <input type="file" class="form-control-file" id="type_image" name="image"
+                                        accept="image/*">
+                                    <small class="form-text text-muted">Max 2MB</small>
+                                    <span class="text-danger error-text type_image_error"></span>
+                                    <div id="type_image_preview" class="mt-2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="type_desc">Deskripsi</label>
+                            <textarea class="form-control" id="type_desc" name="desc" rows="3"></textarea>
+                            <span class="text-danger error-text type_desc_error"></span>
+                        </div>
+
+                        <hr>
+                        <h6>Spesifikasi</h6>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="type_vlt">VLT</label>
+                                    <input type="text" class="form-control" id="type_vlt" name="vlt">
+                                    <span class="text-danger error-text type_vlt_error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="type_uvr">UVR</label>
+                                    <input type="text" class="form-control" id="type_uvr" name="uvr">
+                                    <span class="text-danger error-text type_uvr_error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="type_irr">IRR</label>
+                                    <input type="text" class="form-control" id="type_irr" name="irr">
+                                    <span class="text-danger error-text type_irr_error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="type_tser">TSER</label>
+                                    <input type="text" class="form-control" id="type_tser" name="tser">
+                                    <span class="text-danger error-text type_tser_error"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @push('scripts')
@@ -476,6 +595,174 @@
                                 timer: 1500
                             });
                             location.reload();
+                        }
+                    });
+                }
+            });
+        }
+
+        // ===== Product Types Functions =====
+        function manageTypes(productId, productName) {
+            $('#current_product_id').val(productId);
+            $('#typesModalTitle').text('Manage Types - ' + productName);
+            loadTypes(productId);
+            $('#typesModal').modal('show');
+        }
+
+        function loadTypes(productId) {
+            $.ajax({
+                url: `/admin/products/${productId}/types`,
+                method: 'GET',
+                success: function(response) {
+                    let html = '<table class="table table-bordered table-striped"><thead><tr>' +
+                        '<th>No</th><th>Gambar</th><th>Nama</th><th>VLT</th><th>UVR</th><th>IRR</th><th>TSER</th><th>Aksi</th>' +
+                        '</tr></thead><tbody>';
+
+                    if (response.types.length === 0) {
+                        html +=
+                            '<tr><td colspan="8" class="text-center">Belum ada type untuk produk ini</td></tr>';
+                    } else {
+                        response.types.forEach((type, index) => {
+                            let imgHtml = type.image ?
+                                `<img src="/${type.image}" style="max-width: 50px; max-height: 50px;">` :
+                                '<span class="text-muted">-</span>';
+
+                            html += `<tr>
+                                <td class="text-center">${index + 1}</td>
+                                <td>${imgHtml}</td>
+                                <td>${type.name}</td>
+                                <td>${type.vlt || '-'}</td>
+                                <td>${type.uvr || '-'}</td>
+                                <td>${type.irr || '-'}</td>
+                                <td>${type.tser || '-'}</td>
+                                <td>
+                                    <button class="btn btn-info btn-sm" onclick="editType(${type.id})">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteType(${type.id})">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>`;
+                        });
+                    }
+
+                    html += '</tbody></table>';
+                    $('#typesList').html(html);
+                }
+            });
+        }
+
+        function showAddTypeForm() {
+            resetTypeForm();
+            $('#type_product_id').val($('#current_product_id').val());
+            $('#typeFormModalTitle').text('Tambah Type');
+            $('#typeFormModal').modal('show');
+        }
+
+        function resetTypeForm() {
+            $('#typeForm')[0].reset();
+            $('#type_id').val('');
+            $('.error-text').text('');
+            $('#type_image_preview').html('');
+        }
+
+        $('#type_image').on('change', function() {
+            previewImage(this, '#type_image_preview');
+        });
+
+        $('#typeForm').on('submit', function(e) {
+            e.preventDefault();
+
+            let typeId = $('#type_id').val();
+            let url = typeId ? `/admin/product-types/${typeId}` : '/admin/product-types';
+            let formData = new FormData(this);
+
+            if (typeId) {
+                formData.append('_method', 'PUT');
+            }
+
+            $('.error-text').text('');
+
+            $.ajax({
+                url: url,
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    $('#typeFormModal').modal('hide');
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil!',
+                        text: response.message,
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    loadTypes($('#current_product_id').val());
+                },
+                error: function(xhr) {
+                    if (xhr.status === 422) {
+                        let errors = xhr.responseJSON.errors;
+                        $.each(errors, function(key, value) {
+                            $('.type_' + key + '_error').text(value[0]);
+                        });
+                    }
+                }
+            });
+        });
+
+        function editType(typeId) {
+            resetTypeForm();
+            $('#typeFormModalTitle').text('Edit Type');
+
+            $.ajax({
+                url: `/admin/product-types/${typeId}/edit`,
+                method: 'GET',
+                success: function(response) {
+                    let type = response.type;
+                    $('#type_id').val(type.id);
+                    $('#type_product_id').val(type.product_id);
+                    $('#type_name').val(type.name);
+                    $('#type_desc').val(type.desc);
+                    $('#type_vlt').val(type.vlt);
+                    $('#type_uvr').val(type.uvr);
+                    $('#type_irr').val(type.irr);
+                    $('#type_tser').val(type.tser);
+
+                    if (type.image) {
+                        $('#type_image_preview').html(
+                            `<img src="/${type.image}" style="max-width: 150px; max-height: 150px;">`);
+                    }
+
+                    $('#typeFormModal').modal('show');
+                }
+            });
+        }
+
+        function deleteType(typeId) {
+            Swal.fire({
+                title: 'Apakah Anda yakin?',
+                text: "Type ini akan dihapus!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Ya, hapus!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: `/admin/product-types/${typeId}`,
+                        method: 'DELETE',
+                        success: function(response) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Berhasil!',
+                                text: response.message,
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                            loadTypes($('#current_product_id').val());
                         }
                     });
                 }

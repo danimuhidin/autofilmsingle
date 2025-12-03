@@ -70,6 +70,16 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }
 
+.badge-merah {
+    background-color: var(--warna-merah-aksen);
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: .5rem;
+    font-size: 12px;
+    margin-right: 3px;
+}
+
 .btn-outline-light {
     border-radius: .5rem;
     font-weight: 600;
@@ -114,6 +124,74 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(217, 4, 41, 0.3);
+}
+
+.artikel-body {
+    color: #ffffff !important;
+}
+
+.artikel-cover {
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.artikel-item {
+    background-color: var(--warna-latar-gelap);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.artikel-image-container {
+    overflow: hidden;
+    border-radius: 10px; /* Jika ingin wadah memiliki border-radius */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Pindahkan shadow dari .artikel-cover */
+}
+
+.artikel-image {
+    position: absolute; /* Atur gambar agar mengisi wadah secara absolut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* **Sangat Penting:** Memastikan gambar menutupi area wadah tanpa distorsi, tetapi memotong bagian yang berlebih */
+    display: block; /* Agar tidak ada spasi di bawah gambar */
+}
+
+.artikel-image.bg-secondary {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Pastikan icon berada di tengah */
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.artikel-content {
+    padding: 20px 15px;
+}
+
+.artikel-title a {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--warna-teks-putih);
+    transition: color 0.3s ease;
+}
+
+.artikel-title a:hover {
+    color: var(--warna-kuning-aksen);
+}
+
+.recent-article-title a{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--warna-teks-putih);
 }
 
 .page-hero {
@@ -377,6 +455,10 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.produk-card figure {
+    background-color: var(--warna-gelap-transparan);
 }
 
 .card.produk-card:hover {

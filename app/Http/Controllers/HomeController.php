@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artikel;
 use App\Models\Gallery;
 use App\Models\Hero;
 use App\Models\Jumbotron;
@@ -57,15 +58,10 @@ class HomeController extends Controller
     public function detail_produk($id)
     {
         $hero = Hero::where('id', 1)->first();
-        $product = Product::findOrFail($id);
+        $product = Product::with('types')->findOrFail($id);
         $otherProducts = Product::where('id', '!=', $id)->get();
-
+        $type = $product->types;
         return view('detail-produk', compact('hero', 'product', 'otherProducts'));
-    }
-
-    public function kategori_produk()
-    {
-        return view('kategori-produk');
     }
 
     public function galeri()
@@ -88,5 +84,20 @@ class HomeController extends Controller
         $partners = Partner::all();
         $products = Product::all();
         return view('partner', compact('hero', 'partners', 'products'));
+    }
+
+    public function artikel()
+    {
+        $hero = Hero::orderBy('created_at', 'desc')->first();
+        $artikels = Artikel::with('tags')->orderBy('created_at', 'desc')->paginate(10);
+        return view('artikel', compact('hero', 'artikels'));
+    }
+
+    public function artikel_detail($slug)
+    {
+        $hero = Hero::orderBy('created_at', 'desc')->first();
+        $artikel = Artikel::where('slug', $slug)->with('tags')->firstOrFail();
+        $recentArtikels = Artikel::where('slug', '!=', $slug)->orderBy('created_at', 'desc')->take(5)->get();
+        return view('artikel-detail', compact('hero', 'artikel', 'recentArtikels'));
     }
 }

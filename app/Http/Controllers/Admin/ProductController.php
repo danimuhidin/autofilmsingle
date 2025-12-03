@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::paginate(10);
+        $products = Product::with('types')->paginate(10);
         return view('admin.products.index', compact('products'));
     }
 

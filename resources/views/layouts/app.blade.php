@@ -51,6 +51,9 @@
                                 <a class="nav-link" href="{{ URL::to('galeri') }}">Galeri</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ URL::to('artikel') }}">Artikel</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ URL::to('about') }}">Tentang Kami</a>
                             </li>
                             <li class="nav-item dropdown">

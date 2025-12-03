@@ -97,7 +97,7 @@
                                 </a>
                             </li>
                             <li
-                                class="nav-item {{ request()->is('admin/galleries*') || request()->is('admin/jumbotrons*') || request()->is('admin/heroes*') || request()->is('admin/youtubes*') ? 'menu-open' : '' }}">
+                                class="nav-item {{ request()->is('admin/galleries*') || request()->is('admin/jumbotrons*') || request()->is('admin/heroes*') || request()->is('admin/youtubes*') || request()->is('admin/artikels*') ? 'menu-open' : '' }}">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon far fa-image"></i>
                                     <p>
@@ -132,6 +132,13 @@
                                             class="nav-link {{ request()->is('admin/youtubes*') ? 'active' : '' }}">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Youtube</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ route('artikels.index') }}"
+                                            class="nav-link {{ request()->is('admin/artikels*') ? 'active' : '' }}">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Artikel</p>
                                         </a>
                                     </li>
                                 </ul>

@@ -130,8 +130,52 @@
         </div>
     </section>
 
+    {{-- if $product->types is not empty  --}}
+    @if ($product->types->isNotEmpty())
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Tipe Produk {{ $product->name }}</h2>
+                <div class="row d-flex justify-content-center">
+                    @foreach ($product->types as $type)
+                        <div class="col-md-3 mb-4">
+                            <div class="card produk-card h-100 shadow-sm">
+                                <figure class="mb-0">
+                                    <img src="{{ asset($type->image) }}" class="card-img-top"
+                                        alt="Gambar {{ $type->name }}">
+                                </figure>
+                                <div class="card-body text-left">
+                                    <h5 class="card-title">{{ $type->name }}</h5>
+                                    <p class="card-text">{!! $type->desc !!}</p>
+                                    <ul class="list-unstyled text-white mt-3" style="font-size: .9rem;">
+                                        <li class="mb-1">
+                                            <i class="fas fa-sun text-yellow mr-1"></i>
+                                            <strong>VLT :</strong> {{ $type->vlt }}
+                                        </li>
+                                        <li class="mb-1">
+                                            <i class="fas fa-shield-alt text-yellow mr-1"></i>
+                                            <strong>UVR :</strong> {{ $type->uvr }}
+                                        </li>
+                                        <li class="mb-1">
+                                            <i class="fas fa-thermometer-half text-yellow mr-1"></i>
+                                            <strong>IRR :</strong> {{ $type->irr }}
+                                        </li>
+                                        <li class="mb-1">
+                                            <i class="fas fa-star text-yellow mr-1"></i>
+                                            <strong>TSER :</strong> {{ $type->tser }}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endif
+
     <section class="py-5">
         <div class="container">
+            <hr class="custom-hr mb-5">
             <h2 class="text-center text-white mb-4">Produk Lainnya yang Mungkin Anda Suka</h2>
             <div class="owl-carousel owl-theme" id="produkTerkaitCarousel">
                 @foreach ($otherProducts as $otherProduct)

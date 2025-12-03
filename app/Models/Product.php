@@ -30,4 +30,12 @@ class Product extends Model
         'img5',
         'term_desc',
     ];
+
+    /**
+     * Relasi dengan ProductType (One to Many)
+     */
+    public function types()
+    {
+        return $this->hasMany(ProductType::class);
+    }
 }
