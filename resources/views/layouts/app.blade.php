@@ -49,13 +49,9 @@
         href="{{ asset('vendor/plugins/lightbox2/lightbox.min.css') }}?v={{ env('ASSET_VERSION') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ env('ASSET_VERSION') }}">
 
-    <!-- SEO Fix for Lightbox Links -->
+    <!-- SEO Fix for Lightbox Links - Hide navigation links from crawlers -->
     <style>
-        /* Hide lightbox UI elements from crawlers */
-        .lb-cancel,
-        .lb-close {
-            pointer-events: auto !important;
-        }
+        /* Lightbox works normally, we just fix the links via JavaScript */
     </style>
 
     <script src="{{ asset('vendor/plugins/jquery/jquery.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
@@ -272,35 +268,53 @@
 
         // SEO & Accessibility Fixes
         $(document).ready(function() {
+            // Monitor lightbox state and add class to body when active
+            var checkLightboxInterval = setInterval(function() {
+                if (typeof lightbox !== 'undefined') {
+                    // Hook into lightbox events
+                    $(document).on('click', 'a[data-lightbox]', function() {
+                        setTimeout(function() {
+                            $('body').addClass('lightboxActive');
+                        }, 50);
+                    });
+
+                    // Remove class when lightbox closes
+                    $(document).on('click', '.lb-close, .lb-cancel, .lb-overlay', function() {
+                        $('body').removeClass('lightboxActive');
+                    });
+
+                    // Also check for escape key
+                    $(document).on('keyup', function(e) {
+                        if (e.keyCode === 27 && $('body').hasClass('lightboxActive')) {
+                            $('body').removeClass('lightboxActive');
+                        }
+                    });
+
+                    clearInterval(checkLightboxInterval);
+                }
+            }, 100);
+
             // Fix lightbox UI links - prevent crawler access
             setTimeout(function() {
-                // Target all lightbox control elements
+                // Target all lightbox control elements and remove href
                 $('.lb-cancel, .lb-close, .lb-prev, .lb-next, .lb-data .lb-close').each(function() {
                     var $elem = $(this);
+
+                    // Remove href attribute completely so crawlers ignore it
+                    $elem.removeAttr('href');
 
                     // Add SEO blocking attributes
                     $elem.attr({
                         'rel': 'nofollow noindex',
                         'aria-hidden': 'true',
                         'data-nosnippet': 'true',
-                        'data-robotsmeta': 'noindex, nofollow'
+                        'role': 'button',
+                        'tabindex': '-1'
                     });
-
-                    // Replace href with javascript:void(0) or # if empty
-                    var href = $elem.attr('href');
-                    if (!href || href === '' || href === '#') {
-                        $elem.attr('href', 'javascript:void(0)');
-                    }
-
-                    // Add onclick to prevent default if it's a real link
-                    if (href && href !== '#' && href !== 'javascript:void(0)') {
-                        var originalOnclick = $elem.attr('onclick');
-                        $elem.attr('onclick', 'return false;' + (originalOnclick || ''));
-                    }
                 });
 
-                // Also hide lightbox container from crawlers
-                $('.lightbox, .lb-container, .lb-overlay').attr({
+                // Hide lightbox containers from crawlers
+                $('.lightbox, .lb-container, .lb-overlay, .lb-outerContainer').attr({
                     'data-nosnippet': 'true',
                     'aria-hidden': 'true'
                 });
