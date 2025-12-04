@@ -53,7 +53,7 @@
                                 {{ $partner->address }}
                             </p>
                             <a target="_blank" href="https://wa.me/{{ format_whatsapp($partner->telp) }}"
-                                class="btn btn-kuning btn-sm">
+                                class="btn btn-kuning btn-sm partner-wa-track" data-partner-name="{{ $partner->name }}">
                                 <i class="fas fa-phone-alt"></i> {{ $partner->telp }}
                             </a>
                         </div>
@@ -132,8 +132,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" id="pesan" rows="4"
-                            placeholder="Tulis pesan singkat mengenai bisnis Anda..."></textarea>
+                        <textarea class="form-control" id="pesan" rows="4" placeholder="Tulis pesan singkat mengenai bisnis Anda..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-merah btn-block">Ajukan Kemitraan</button>
                 </form>
@@ -146,6 +145,29 @@
 
 @push('scripts')
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- PELACAKAN KLIK PARTNER WHATSAPP ---
+            const partnerLinks = document.querySelectorAll('.partner-wa-track');
+
+            partnerLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    // Ambil nama partner dari atribut data-partner-name
+                    const partnerName = link.getAttribute('data-partner-name');
+
+                    if (typeof gtag === 'function') {
+                        // Gunakan event name yang spesifik untuk partner
+                        gtag('event', 'partner_whatsapp_click', {
+                            'event_category': 'Partner Engagement',
+                            'event_label': 'Hubungi Partner: ' + partnerName,
+                            'partner_name': partnerName, // Parameter kustom
+                            'source_type': 'partner_list'
+                        });
+
+                        console.log(`Tracked WA click for Partner: ${partnerName}`);
+                    }
+                });
+            });
+        });
         $(document).ready(function() {
 
             // 1. Inisialisasi Owl Carousel untuk Logo Partner

@@ -66,7 +66,7 @@ return [
     */
 
     'timezone' => 'UTC',
-
+    'google_tag_id' => env('GOOGLE_TAG_ID'),
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration

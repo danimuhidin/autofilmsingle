@@ -56,13 +56,13 @@
                 @foreach ($outlets as $outlet)
                     <div class="col-md-3 mb-3">
                         <div class="card">
-                            <img src="{{ asset('storage/' . $outlet->image) }}" alt="{{ $outlet->name }}"/>
+                            <img src="{{ asset('storage/' . $outlet->image) }}" alt="{{ $outlet->name }}" />
                             <div class="card-body">
                                 <h3 class="title">{{ $outlet->name }}</h3>
                                 <p class="desc"> {{ $outlet->address }}</p>
                                 <div class="meta">
                                     <a href="https://wa.me/{{ format_whatsapp($outlet->telp) }}" target="_blank"
-                                        class="me-2">
+                                        class="me-2 outlet-wa-track" data-outlet-name="{{ $outlet->name }}">
                                         <span>📞 {{ $outlet->telp }}</span>
                                     </a>
                                 </div>
@@ -165,7 +165,8 @@
                 @foreach ($youtubes as $youtube)
                     <div class="col-lg-6 mb-4 mb-lg-3 video-wrapper">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe title="YouTube video player" class="embed-responsive-item" src="{{ $youtube->link }}" allowfullscreen></iframe>
+                            <iframe title="YouTube video player" class="embed-responsive-item" src="{{ $youtube->link }}"
+                                allowfullscreen></iframe>
                         </div>
                     </div>
                 @endforeach
@@ -263,15 +264,14 @@
                         </p>
                         <p>
                             <i class="fas fa-phone-alt"></i>
-                            <a class="text-white-50" href="https://wa.me/{{ format_whatsapp($bio->whatsapp) }}" target="_blank">
+                            <a class="text-white-50" href="https://wa.me/{{ format_whatsapp($bio->whatsapp) }}"
+                                target="_blank">
                                 0812-4400-0805
                             </a>
                         </p>
                         <p>
                             <i class="fab fa-instagram"></i>
-                            <a class="text-white-50"
-                                href="{{ $bio->ig_link }}"
-                                target="_blank">
+                            <a class="text-white-50" href="{{ $bio->ig_link }}" target="_blank">
                                 {{ $bio->ig_name }}
                             </a>
                         </p>
@@ -287,6 +287,30 @@
 
 @push('scripts')
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Dapatkan semua link outlet dengan class 'outlet-wa-track'
+            const outletLinks = document.querySelectorAll('.outlet-wa-track');
+
+            outletLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    // Ambil nama outlet dari atribut data-outlet-name
+                    const outletName = link.getAttribute('data-outlet-name');
+
+                    // Pastikan fungsi gtag sudah dimuat
+                    if (typeof gtag === 'function') {
+                        // 2. Panggil gtag() dengan nama event dan parameter yang berbeda
+                        gtag('event', 'outlet_whatsapp_click', {
+                            'event_category': 'Outlet Engagement',
+                            'event_label': 'Hubungi Outlet: ' + outletName,
+                            'outlet_name': outletName, // Parameter kustom untuk analisis lebih lanjut
+                            'source_type': 'outlet_list'
+                        });
+
+                        console.log('Outlet WA Click Tracked for:', outletName);
+                    }
+                });
+            });
+        });
         $(document).ready(function() {
             $('#hero-slider').owlCarousel({
                 items: 1,

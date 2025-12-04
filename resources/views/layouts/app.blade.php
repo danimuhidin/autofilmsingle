@@ -23,6 +23,20 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}?v={{ env('ASSET_VERSION') }}">
     <script src="{{ asset('vendor/plugins/jquery/jquery.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
     @yield('styles')
+
+    @if (config('app.google_tag_id'))
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('app.google_tag_id') }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', '{{ config('app.google_tag_id') }}');
+        </script>
+    @endif
 </head>
 
 <body class="hold-transition sidebar-mini" data-spy="scroll" data-target="#mainNavbar" data-offset="80">
@@ -131,7 +145,8 @@
         <div class="wa-bubble-wrapper">
             <div id="wa-menu">
                 @foreach ($waBubble as $contact)
-                    <a href="https://wa.me/{{ format_whatsapp($contact->telp) }}" target="_blank">
+                    <a class="wa-link-track" data-name="{{ $contact->name }}"
+                        href="https://wa.me/{{ format_whatsapp($contact->telp) }}" target="_blank">
                         <i class="fas fa-map-pin"></i> {{ $contact->name }}
                     </a>
                 @endforeach
@@ -141,6 +156,37 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Dapatkan semua link dengan class 'wa-link-track'
+            const waLinks = document.querySelectorAll('.wa-link-track');
+
+            // 2. Loop melalui setiap link dan tambahkan event listener
+            waLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    // Ambil nama kontak dari atribut data-name
+                    const contactName = link.getAttribute('data-name');
+
+                    // Pastikan fungsi gtag sudah dimuat
+                    if (typeof gtag === 'function') {
+                        // 3. Panggil gtag() untuk mencatat event
+                        gtag('event', 'whatsapp_contact_click', {
+                            'event_category': 'Leads',
+                            'event_label': 'Kontak WhatsApp: ' + contactName,
+                            'value': 1, // Berikan nilai jika konversi ini bernilai uang
+                            // Kirim nama kontak sebagai parameter kustom
+                            'contact_name': contactName
+                        });
+
+                        console.log('WA Click Tracked for:', contactName);
+                    }
+
+                    // Biarkan aksi default (membuka link WA) tetap berjalan
+                });
+            });
+        });
+    </script>
 
     <script src="{{ asset('vendor/plugins/bootstrap/js/bootstrap.bundle.min.js') }}?v={{ env('ASSET_VERSION') }}">
     </script>
