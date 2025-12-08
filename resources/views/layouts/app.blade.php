@@ -34,6 +34,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('storage/' . $bio->favicon) }}">
     <link rel="apple-touch-icon" href="{{ asset('storage/' . $bio->favicon) }}">
+    <link rel="icon" type="image/png" sizes="180x180" href="{{ asset('storage/' . $bio->favicon) }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('storage/' . $bio->favicon) }}">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet"
