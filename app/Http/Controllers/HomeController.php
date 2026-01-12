@@ -7,7 +7,6 @@ use App\Models\Gallery;
 use App\Models\Hero;
 use App\Models\Jumbotron;
 use App\Models\Mission;
-use App\Models\Outlet;
 use App\Models\Partner;
 use App\Models\Post;
 use App\Models\Product;
@@ -20,7 +19,6 @@ class HomeController extends Controller
     public function index()
     {
         $jumbotrons = Jumbotron::all();
-        $outlets = Outlet::all();
         $products = Product::all();
         $keunggulans = Post::all();
         $galleries = Gallery::all();
@@ -28,7 +26,7 @@ class HomeController extends Controller
         $testimonials = Testimonial::all();
 
         return view('home', compact(
-            'jumbotrons', 'outlets', 'products', 'keunggulans', 'galleries', 'youtubes', 'testimonials'
+            'jumbotrons', 'products', 'keunggulans', 'galleries', 'youtubes', 'testimonials'
         ));
     }
 
@@ -44,8 +42,7 @@ class HomeController extends Controller
     public function contact()
     {
         $hero = Hero::where('id', 4)->first();
-        $outlets = Outlet::all();
-        return view('contact', compact('hero', 'outlets'));
+        return view('contact', compact('hero'));
     }
 
     public function produk()
@@ -69,13 +66,6 @@ class HomeController extends Controller
         $hero = Hero::where('id', 2)->first();
         $galleries = Gallery::all();
         return view('galeri', compact('hero', 'galleries'));
-    }
-
-    public function outlet()
-    {
-        $hero = Hero::where('id', 5)->first();
-        $outlets = Outlet::all();
-        return view('outlet', compact('hero', 'outlets'));
     }
 
     public function partner()

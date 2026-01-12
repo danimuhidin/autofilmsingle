@@ -126,33 +126,27 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ URL::to('/') }}">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ URL::to('produk') }}">Produk</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ URL::to('galeri') }}">Galeri</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ URL::to('artikel') }}">Artikel</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ URL::to('about') }}">Tentang Kami</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownKontak"
-                                    role="button" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    Kontak & Outlet
+                                <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ URL::to('/') }}">
+                                    Home
                                 </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownKontak">
-                                    <a class="dropdown-item" href="{{ URL::to('contact') }}">Hubungi Kami (HQ)</a>
-                                    <a class="dropdown-item" href="{{ URL::to('outlet') }}">Daftar Outlet</a>
-                                </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ URL::to('partner') }}">Partner</a>
+                                <a class="nav-link {{ request()->is('produk') ? 'active' : '' }}" href="{{ URL::to('produk') }}">Produk</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->is('galeri') ? 'active' : '' }}" href="{{ URL::to('galeri') }}">Galeri</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->is('artikel') ? 'active' : '' }}" href="{{ URL::to('artikel') }}">Artikel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ URL::to('about') }}">Tentang Kami</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ URL::to('contact') }}">Kontak</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{ request()->is('partner') ? 'active' : '' }}" href="{{ URL::to('partner') }}">Partner</a>
                             </li>
                         </ul>
                     </div>
@@ -174,10 +168,11 @@
                         <h5>Quick Links</h5>
                         <ul>
                             <li><a href="{{ URL::to('/') }}">Home</a></li>
+                            <li><a href="{{ URL::to('produk') }}">Produk</a></li>
                             <li><a href="{{ URL::to('galeri') }}">Galeri</a></li>
+                            <li><a href="{{ URL::to('artikel') }}">Artikel</a></li>
                             <li><a href="{{ URL::to('about') }}">Tentang Kami</a></li>
                             <li><a href="{{ URL::to('contact') }}">Kontak</a></li>
-                            <li><a href="{{ URL::to('outlet') }}">Outlet</a></li>
                             <li><a href="{{ URL::to('partner') }}">Partner</a></li>
                             <li><a href="{{ URL::to('admin/dashboard') }}">Administrator</a></li>
                         </ul>

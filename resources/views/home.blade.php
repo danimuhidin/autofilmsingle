@@ -42,40 +42,8 @@
         </div>
     </section>
 
-    <section id="outlet-kami" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>
-                    Outlet Tersedia di Berbagai Kota
-                </h2>
-                <p>
-                    Temukan lokasi outlet resmi Mantra Sakti terdekat di kota Anda.
-                </p>
-            </div>
-            <div class="row">
-                @foreach ($outlets as $outlet)
-                    <div class="col-md-3 mb-3">
-                        <div class="card">
-                            <img src="{{ asset('storage/' . $outlet->image) }}" alt="{{ $outlet->name }}" />
-                            <div class="card-body">
-                                <h3 class="title">{{ $outlet->name }}</h3>
-                                <p class="desc"> {{ $outlet->address }}</p>
-                                <div class="meta">
-                                    <a href="https://wa.me/{{ format_whatsapp($outlet->telp) }}" target="_blank"
-                                        class="me-2 outlet-wa-track" data-outlet-name="{{ $outlet->name }}">
-                                        <span>📞 {{ $outlet->telp }}</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section id="produk-kami" class="section-padding bg-dark">
-        <div class="container">
+    <section id="produk-kami" class="section-padding bg-light">
+       <div class="container">
             <div class="section-title">
                 <h2>Pilihan Produk Kaca Film</h2>
                 <p>
@@ -107,31 +75,6 @@
                                     class="btn btn-merah mt-auto">Lihat
                                     Detail</a>
                             </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section id="keunggulan" class="section-padding bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Mengapa Memilih Mantra Sakti?</h2>
-                <p>Komitmen kami adalah kepuasan dan jaminan kualitas.</p>
-            </div>
-            <div class="row justify-content-center">
-                @foreach ($keunggulans as $keunggulan)
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="keunggulan-item">
-                            <div class="icon">
-                                <img src="{{ asset('storage/' . $keunggulan->image) }}" alt="{{ $keunggulan->title }}"
-                                    style="width: 60px; height: 60px;">
-                            </div>
-                            <h4>{{ $keunggulan->title }}</h4>
-                            <p class="text-white-50">
-                                {{ $keunggulan->desc }}
-                            </p>
                         </div>
                     </div>
                 @endforeach
@@ -174,6 +117,48 @@
         </div>
     </section>
 
+    <section id="keunggulan" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mengapa Memilih Mantra Sakti?</h2>
+                <p>Komitmen kami adalah kepuasan dan jaminan kualitas.</p>
+            </div>
+            <div class="row justify-content-center">
+                @foreach ($keunggulans as $keunggulan)
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="keunggulan-item">
+                            <div class="icon">
+                                <img src="{{ asset('storage/' . $keunggulan->image) }}" alt="{{ $keunggulan->title }}"
+                                    style="width: 60px; height: 60px;">
+                            </div>
+                            <h4>{{ $keunggulan->title }}</h4>
+                            <p class="text-white-50">
+                                {{ $keunggulan->desc }}
+                            </p>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section id="partner" class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-title">
+                <h2>Brand Partner Resmi Kami</h2>
+                <p>Kami hanya bekerja dengan brand terbaik dan terpercaya.</p>
+            </div>
+            <div class="row align-items-center justify-content-center">
+                @foreach ($products as $product)
+                    <div class="col-lg-2 col-md-4 col-6 partner-logo">
+                        <img src="{{ asset('storage/' . $product->icon) }}" alt="{{ $product->name }}"
+                            class="img-fluid">
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
     <section id="testimoni" class="section-padding bg-light">
         <div class="container">
             <div class="section-title">
@@ -198,33 +183,16 @@
         </div>
     </section>
 
-    <section id="partner" class="section-padding bg-dark">
-        <div class="container">
-            <div class="section-title">
-                <h2>Brand Partner Resmi Kami</h2>
-                <p>Kami hanya bekerja dengan brand terbaik dan terpercaya.</p>
-            </div>
-            <div class="row align-items-center justify-content-center">
-                @foreach ($products as $product)
-                    <div class="col-lg-2 col-md-4 col-6 partner-logo">
-                        <img src="{{ asset('storage/' . $product->icon) }}" alt="{{ $product->name }}"
-                            class="img-fluid">
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-
-    <section id="kontak-outlet" class="section-padding bg-light">
+    <section id="kontak-outlet" class="section-padding bg-dark">
         <div class="container">
             <div class="section-title">
                 <h2>Hubungi Kami</h2>
-                <p>Siap membantu kebutuhan Anda di Kantor Pusat atau cabang terdekat.</p>
+                <p>Siap membantu kebutuhan Anda.</p>
             </div>
 
             <div class="row mb-5">
                 <div class="col-lg-7 mb-4 mb-lg-0 contact-form">
-                    <h4>Kirim Pertanyaan (Kantor Pusat)</h4>
+                    <h4>Kirim Pertanyaan</h4>
                     <form action="#" method="POST">
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -252,9 +220,9 @@
                 </div>
 
                 <div class="col-lg-5">
-                    <h4>Informasi Kantor Pusat (HQ)</h4>
+                    <h4>Informasi Outlet</h4>
                     <p class="text-white-50">
-                        Hubungi kami langsung di kantor pusat untuk layanan korporat, kemitraan, atau
+                        Hubungi kami untuk layanan korporat, kemitraan, atau
                         konsultasi proyek skala besar.
                     </p>
                     <div class="contact-info">

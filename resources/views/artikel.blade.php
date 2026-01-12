@@ -69,7 +69,7 @@
                     </div>
                 </div>
             @empty
-                <div class="alert alert-info text-center">
+                <div class="alert alert-secondary text-center">
                     <i class="fas fa-info-circle fa-2x mb-3"></i>
                     <h5>Belum ada artikel tersedia</h5>
                     <p>Artikel akan segera hadir. Silakan cek kembali nanti.</p>

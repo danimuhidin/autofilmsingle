@@ -144,7 +144,7 @@
                                 </ul>
                             </li>
 
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="{{ route('outlets.index') }}"
                                     class="nav-link {{ request()->is('admin/outlets*') ? 'active' : '' }}">
                                     <i class="nav-icon fas fa-store"></i>
@@ -152,7 +152,7 @@
                                         Kelola Outlet
                                     </p>
                                 </a>
-                            </li>
+                            </li> --}}
                             <li class="nav-item">
                                 <a href="{{ route('products.index') }}"
                                     class="nav-link {{ request()->is('admin/products*') ? 'active' : '' }}">

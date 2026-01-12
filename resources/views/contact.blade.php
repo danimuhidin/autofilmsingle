@@ -20,7 +20,7 @@
 
     <section class="contact-hq py-5">
         <div class="container">
-            <h2 class="section-title">Hubungi Kantor Pusat</h2>
+            <h2 class="section-title">Hubungi Kami</h2>
             <div class="row">
                 <div class="col-md-7 mb-5 mb-md-0">
                     <h3 class="contact-subtitle">Kirim Pertanyaan Anda</h3>
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="col-md-5">
-                    <h3 class="contact-subtitle">Informasi Kantor Pusat</h3>
+                    <h3 class="contact-subtitle">Informasi Outlet</h3>
                     <ul class="contact-info-list">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
@@ -95,43 +95,6 @@
                             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="outlet-section py-5">
-        <div class="container">
-            <h2 class="section-title mb-2">Temukan Outlet Terdekat Kami</h2>
-            <p class="text-center text-secondary col-md-12 mx-auto mb-5">
-                Untuk pemasangan retail dan konsultasi langsung, silakan hubungi jaringan outlet resmi kami di bawah ini.
-            </p>
-            <div id="daftar-outlet">
-                <div class="row">
-                    @foreach ($outlets as $outlet)
-                        <div class="col-md-6 mb-4 h-100">
-                            <div class="card outlet-card h-100">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-2" style="color: var(--warna-kuning-aksen);">
-                                        <b>{{ $outlet->name }}</b>
-                                    </h5>
-                                    <p class="card-text text-white-50">
-                                        {{ $outlet->address }}
-                                    </p>
-                                    <p class="card-text text-white-50">
-                                        <i class="fas fa-phone-alt"></i> {{ $outlet->telp }}
-                                    </p>
-                                    <a target="_blank" href="{{ $outlet->link1 }}" class="btn btn-kuning btn-sm">
-                                        Lihat Google Maps
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="{{ URL::to('/outlet') }}" class="btn btn-merah">Lihat
-                    Semua Jaringan Outlet</a>
             </div>
         </div>
     </section>
