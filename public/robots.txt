@@ -12,4 +12,4 @@ Disallow: /*?lb=
 Disallow: /*.lb-*
 
 # Sitemap location
-Sitemap: https://mantrasaktiautofilm.com/sitemap.xml
+Sitemap: https://mantrasaktiautofilmdepok.com/sitemap.xml

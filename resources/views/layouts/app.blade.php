@@ -36,6 +36,8 @@
     <link rel="apple-touch-icon" href="{{ asset('storage/' . $bio->favicon) }}">
     <link rel="icon" type="image/png" sizes="180x180" href="{{ asset('storage/' . $bio->favicon) }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('storage/' . $bio->favicon) }}">
+    <link rel="shortcut icon" href="{{ asset('storage/' . $bio->favicon) }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('storage/' . $bio->favicon) }}" type="image/png">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -126,27 +128,34 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ URL::to('/') }}">
+                                <a class="nav-link {{ request()->is('/') ? 'active' : '' }}"
+                                    href="{{ URL::to('/') }}">
                                     Home
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('produk') ? 'active' : '' }}" href="{{ URL::to('produk') }}">Produk</a>
+                                <a class="nav-link {{ request()->is('produk') ? 'active' : '' }}"
+                                    href="{{ URL::to('produk') }}">Produk</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('galeri') ? 'active' : '' }}" href="{{ URL::to('galeri') }}">Galeri</a>
+                                <a class="nav-link {{ request()->is('galeri') ? 'active' : '' }}"
+                                    href="{{ URL::to('galeri') }}">Galeri</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('artikel') ? 'active' : '' }}" href="{{ URL::to('artikel') }}">Artikel</a>
+                                <a class="nav-link {{ request()->is('artikel') ? 'active' : '' }}"
+                                    href="{{ URL::to('artikel') }}">Artikel</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="{{ URL::to('about') }}">Tentang Kami</a>
+                                <a class="nav-link {{ request()->is('about') ? 'active' : '' }}"
+                                    href="{{ URL::to('about') }}">Tentang Kami</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ URL::to('contact') }}">Kontak</a>
+                                <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}"
+                                    href="{{ URL::to('contact') }}">Kontak</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {{ request()->is('partner') ? 'active' : '' }}" href="{{ URL::to('partner') }}">Partner</a>
+                                <a class="nav-link {{ request()->is('partner') ? 'active' : '' }}"
+                                    href="{{ URL::to('partner') }}">Partner</a>
                             </li>
                         </ul>
                     </div>
