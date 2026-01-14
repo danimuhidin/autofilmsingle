@@ -106,12 +106,16 @@
             j.src =
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5JGHNJP9');
+        })(window, document, 'script', 'dataLayer', 'GTM-KC5R4T8Z');
     </script>
     <!-- End Google Tag Manager -->
 </head>
 
 <body class="hold-transition sidebar-mini" data-spy="scroll" data-target="#mainNavbar" data-offset="80">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KC5R4T8Z" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="wrapper">
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNavbar">
