@@ -243,6 +243,18 @@
     <script src="{{ asset('vendor/plugins/OwlCarousel2/owl.carousel.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
     <script src="{{ asset('vendor/plugins/lightbox2/lightbox.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
     <script src="{{ asset('vendor/dist/js/adminlte.min.js') }}?v={{ env('ASSET_VERSION') }}"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GVFV82KW4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GVFV82KW4D');
+    </script>
     <script>
         $(window).scroll(function() {
             if ($(this).scrollTop() > 50) {
