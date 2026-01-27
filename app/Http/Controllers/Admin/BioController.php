@@ -27,7 +27,7 @@ class BioController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'brand_name' => 'required|string|max:255',
-            'favicon' => 'nullable|mimes:jpeg,png,jpg,gif,webp,ico,svg|max:2048',
+            'favicon' => 'nullable|max:2048',
             'brand_img' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'img_home' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'img_about' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
@@ -80,7 +80,7 @@ class BioController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|string|max:255',
             'brand_name' => 'required|string|max:255',
-            'favicon' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp,ico,svg|max:2048',
+            'favicon' => 'nullable|max:2048',
             'brand_img' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'img_home' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'img_about' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
