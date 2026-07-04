@@ -221,19 +221,56 @@
             </div>
         </footer>
 
+        @php
+            $waBubbleCount = isset($waBubble) ? $waBubble->count() : 0;
+            $waBubbleSingle = $waBubbleCount === 1 ? $waBubble->first() : null;
+        @endphp
+
         <div class="wa-bubble-wrapper">
-            <div id="wa-menu">
-                @foreach ($waBubble as $contact)
-                    <a class="wa-link-track" data-name="{{ $contact->name }}"
-                        href="https://wa.me/{{ format_whatsapp($contact->telp) }}" target="_blank">
-                        <i class="fas fa-map-pin"></i> {{ $contact->name }}
-                    </a>
-                @endforeach
-            </div>
-            <div id="wa-toggle">
-                <i class="fab fa-whatsapp"></i>
-            </div>
+            @if ($waBubbleCount === 1 && $waBubbleSingle)
+                <a id="wa-toggle" href="https://wa.me/{{ format_whatsapp($waBubbleSingle->telp) }}" target="_blank"
+                    rel="noopener noreferrer" aria-label="Chat via WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            @elseif ($waBubbleCount > 1)
+                <button id="wa-toggle" type="button" data-toggle="modal" data-target="#waContactsModal"
+                    aria-label="Open WhatsApp contacts">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+            @else
+                <button id="wa-toggle" type="button" aria-label="WhatsApp contact unavailable" disabled>
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+            @endif
         </div>
+
+        @if ($waBubbleCount > 1)
+            <div class="modal fade" id="waContactsModal" tabindex="-1" role="dialog"
+                aria-labelledby="waContactsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="waContactsModalLabel">Pilih Kontak WhatsApp</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body p-0">
+                            <div class="list-group list-group-flush">
+                                @foreach ($waBubble as $contact)
+                                    <a class="list-group-item list-group-item-action wa-link-track"
+                                        data-name="{{ $contact->name }}"
+                                        href="https://wa.me/{{ format_whatsapp($contact->telp) }}" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="fas fa-map-pin text-success mr-2"></i>{{ $contact->name }}
+                                    </a>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endif
     </div>
 
     <script src="{{ asset('vendor/plugins/bootstrap/js/bootstrap.bundle.min.js') }}?v={{ env('ASSET_VERSION') }}">
@@ -275,17 +312,6 @@
 
             if ($('.navbar-toggler').is(':visible')) {
                 $('.navbar-collapse').collapse('hide');
-            }
-        });
-
-        $('#wa-toggle').on('click', function() {
-            $('#wa-menu').slideToggle(300);
-        });
-        $(document).on('click', function(event) {
-            if (!$(event.target).closest('.wa-bubble-wrapper').length) {
-                if ($('#wa-menu').is(':visible')) {
-                    $('#wa-menu').slideUp(300);
-                }
             }
         });
 
